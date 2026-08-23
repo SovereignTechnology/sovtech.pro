@@ -7,6 +7,9 @@
 - Web: https://www.sovtech.pro/
 - Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
 - GitHub: https://github.com/sovitxyz
+- GitLab: https://sovit.xyz/gitlab/
+- Git (Nostr/NIP-34): https://git.sovit.xyz
+- Git (Nostr/NIP-34): https://git.sovtech.pro
 
 ## Services
 
@@ -60,11 +63,6 @@ All work is open-sourced under AGPL-3.0 by default. Custom license releases avai
 ## About
 Sovereign Technology S.A.S. de C.V. previously went to market as sovIT.xyz, a Bitcoin-native IT consultancy — the same company and the same people under a new domain and brand, not a new business. Founder Cameron has been building and securing systems since childhood — from early websites and wireless security research to enterprise IT at Health First — and now leads Sovereign Technology in deploying and operating sovereign, open-source AI systems and Linux infrastructure across Latin America and beyond.
 
-## Portfolio
-- sovtech.pro
-- gcs.sv
-- whatarush.org
-- bitcoinbarbell.com
 
 ## Further Reading
 - [Full site content for LLMs](/llms-full.txt)

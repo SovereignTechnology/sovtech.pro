@@ -6,6 +6,9 @@ Website: https://www.sovtech.pro/
 Email: services@sovtech.pro
 Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
 GitHub: https://github.com/sovitxyz
+GitLab: https://sovit.xyz/gitlab/
+Git (Nostr/NIP-34): https://git.sovit.xyz
+Git (Nostr/NIP-34): https://git.sovtech.pro
 License: AGPL-3.0
 
 ---
@@ -110,6 +113,7 @@ You have the freedom to use, modify, and deploy your own updates to the code we 
 Custom license releases are available for an additional fee — allowing proprietary use or alternative licensing terms when required.
 
 Source: https://github.com/sovitxyz
+Mirrors: https://sovit.xyz/gitlab/ · https://git.sovit.xyz · https://git.sovtech.pro
 
 ---
 
@@ -133,12 +137,6 @@ In high school, he became the go-to person for computer help — repairing and i
 
 He later built the most powerful workstation/gaming computer possible (2017) and worked as an IT professional at Health First, gaining valuable experience in enterprise IT environments. Today, Cameron leads Sovereign Technology — deploying and operating sovereign, open-source AI systems and serving others through technology they truly own.
 
-### 2026 Portfolio
-
-- sovtech.pro (https://www.sovtech.pro)
-- gcs.sv (https://gcs.sv)
-- whatarush.org (https://whatarush.org)
-- bitcoinbarbell.com (https://bitcoinbarbell.com)
 
 ---
 
