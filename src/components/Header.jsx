@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import BrandMark from '@/components/BrandMark';
 
 const LEGACY_HOSTS = ['sovit.xyz', 'www.sovit.xyz'];
 
@@ -91,8 +92,8 @@ const Header = () => {
           whileHover={{ scale: 1.05 }}
           className="flex items-center gap-2"
         >
-          <div className="w-8 h-8 bg-bitcoin rounded flex items-center justify-center font-mono font-bold text-black" aria-hidden="true">
-            ◆
+          <div className="w-8 h-8 bg-bitcoin rounded flex items-center justify-center text-black flex-shrink-0" aria-hidden="true">
+            <BrandMark className="w-5 h-5" />
           </div>
           <span className="font-mono text-base sm:text-lg lg:text-xl font-bold whitespace-nowrap">
             <span className="text-white">Sovereign</span>

@@ -114,11 +114,16 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
+            className="font-bold mb-6 leading-[1.15] tracking-tight text-balance"
           >
-            <span className="text-white">Develop. Deploy. Run.</span>
-            <br />
-            <span className="text-bitcoin text-4xl md:text-6xl lg:text-7xl">Sovereign AI &amp; Infrastructure.</span>
+            {/* Courier New runs 0.6em per character, so these sizes are chosen to keep
+                each line on one row inside the max-w-5xl container at every breakpoint. */}
+            <span className="block text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+              Develop. Deploy. Run.
+            </span>
+            <span className="block text-bitcoin mt-2 sm:mt-3 text-lg sm:text-3xl md:text-4xl lg:text-5xl">
+              Sovereign AI &amp; Infrastructure.
+            </span>
           </motion.h1>
 
           {/* Subheading */}

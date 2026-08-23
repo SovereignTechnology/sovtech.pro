@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Mail } from 'lucide-react';
 import { CONTACT_EMAIL } from '@/lib/contact';
+import BrandMark from '@/components/BrandMark';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -40,16 +41,16 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-bitcoin rounded flex items-center justify-center font-mono font-bold text-black text-xl" aria-hidden="true">
-                ◆
+              <div className="w-10 h-10 bg-bitcoin rounded flex items-center justify-center text-black" aria-hidden="true">
+                <BrandMark className="w-6 h-6" />
               </div>
               <div>
                 <p className="font-mono font-bold text-white">Sovereign Technology S.A.S. de C.V.</p>
-                <p className="text-xs text-gray-500 font-mono">AI OPERATING EXPERTS — SOVTECH.PRO</p>
+                <p className="text-xs text-gray-500 font-mono">AI &amp; LINUX INFRASTRUCTURE — SOVTECH.PRO</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Develop. Deploy. Run. Sovereign AI systems you own.
+              Develop. Deploy. Run. Sovereign AI and Linux infrastructure you own.
             </p>
             <div className="flex gap-3">
               <motion.a

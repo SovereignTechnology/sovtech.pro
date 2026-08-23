@@ -285,8 +285,10 @@
 					background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(26,26,26,1) 100%);
 					border-bottom: 1px solid var(--border-dim);
 				}
-				.njs-hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); margin: 0 0 0.5rem; }
-				.njs-hero-sub { font-size: clamp(1.5rem, 3vw, 2.5rem); margin: 0 0 1.5rem; }
+				/* Headings are Courier New (0.6em per char), so "Develop. Deploy. Run." is
+				   12.6em wide — these maxima keep each line on one row inside .njs-wrap. */
+				.njs-hero h1 { font-size: clamp(1.75rem, 5vw, 4rem); margin: 0 0 0.5rem; letter-spacing: -0.02em; text-wrap: balance; }
+				.njs-hero-sub { font-size: clamp(1.15rem, 3.2vw, 2.5rem); margin: 0 0 1.5rem; letter-spacing: -0.02em; text-wrap: balance; }
 				.njs-hero p { font-size: 1.25rem; color: var(--text-dim); max-width: 700px; margin: 0 auto 2rem; }
 				.njs-hero-badge {
 					display: inline-block; font-family: monospace; font-size: 0.875rem;
@@ -535,7 +537,7 @@
 			<header class="njs-header">
 				<div class="njs-wrap njs-header-inner">
 					<div class="njs-logo">
-						<div class="njs-logo-icon">&#x25C6;</div>
+						<div class="njs-logo-icon" aria-hidden="true"><svg viewBox="4 4.5 23.5 23.5" width="20" height="20" fill="none" stroke="currentColor" aria-hidden="true" focusable="false"><path d="M 5.5 11 L 9.8 16 L 5.5 21" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><g stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M 13 9 V 23"/><path d="M 13 9.6 H 18.2 a 3.1 3.1 0 0 1 0 6.2 H 13"/><path d="M 13 15.8 H 19 a 3.5 3.5 0 0 1 0 7 H 13"/></g><g stroke-width="2.02" stroke-linecap="round"><path d="M 16 6 V 9.6"/><path d="M 19.4 6 V 9.6"/><path d="M 16 22.8 V 26.4"/><path d="M 19.4 22.8 V 26.4"/></g></svg></div>
 						<div class="njs-logo-text"><span style="color:#fff">Sovereign</span><span style="color:#F7931A">Technology</span></div>
 					</div>
 					<nav class="njs-nav">
@@ -921,7 +923,7 @@
 					<div class="njs-footer-grid">
 						<div class="njs-footer-brand">
 							<div class="njs-logo" style="margin-bottom:0.75rem">
-								<div class="njs-logo-icon">&#x25C6;</div>
+								<div class="njs-logo-icon" aria-hidden="true"><svg viewBox="4 4.5 23.5 23.5" width="20" height="20" fill="none" stroke="currentColor" aria-hidden="true" focusable="false"><path d="M 5.5 11 L 9.8 16 L 5.5 21" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><g stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M 13 9 V 23"/><path d="M 13 9.6 H 18.2 a 3.1 3.1 0 0 1 0 6.2 H 13"/><path d="M 13 15.8 H 19 a 3.5 3.5 0 0 1 0 7 H 13"/></g><g stroke-width="2.02" stroke-linecap="round"><path d="M 16 6 V 9.6"/><path d="M 19.4 6 V 9.6"/><path d="M 16 22.8 V 26.4"/><path d="M 19.4 22.8 V 26.4"/></g></svg></div>
 								<div>
 									<div style="font-family:monospace;font-weight:bold">Sovereign Technology S.A.S. de C.V.</div>
 									<div style="font-family:monospace;font-size:0.7rem;color:#4A4A4A">AI OPERATING EXPERTS &mdash; SOVTECH.PRO</div>
