@@ -44,7 +44,7 @@ const Footer = () => {
                 ◆
               </div>
               <div>
-                <p className="font-mono font-bold text-white">Sovereign Technology SAS</p>
+                <p className="font-mono font-bold text-white">Sovereign Technology S.A.S. de C.V.</p>
                 <p className="text-xs text-gray-500 font-mono">AI OPERATING EXPERTS — SOVTECH.PRO</p>
               </div>
             </div>
@@ -99,7 +99,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm font-mono">
-              © {currentYear} Sovereign Technology SAS. All rights reserved.
+              © {currentYear} Sovereign Technology S.A.S. de C.V. All rights reserved.
             </p>
             <p className="text-gray-600 text-xs font-mono">
               Formerly sovIT.xyz

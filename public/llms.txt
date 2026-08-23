@@ -1,6 +1,6 @@
-# Sovereign Technology SAS — AI Operating Experts
+# Sovereign Technology S.A.S. de C.V. — AI & Linux Infrastructure
 
-> Sovereign Technology SAS is an AI operations company registered in El Salvador. We develop, deploy, and run sovereign AI systems — custom models and pipelines on infrastructure you own, operated 24/7. Formerly sovIT.xyz, the Bitcoin-native IT consultancy founded by Cameron. Your data. Your models. Your rules.
+> Sovereign Technology S.A.S. de C.V. is an open-source technology company registered in El Salvador, working across two practice areas: sovereign AI operations and Linux infrastructure. Previously went to market as sovIT.xyz, the Bitcoin-native IT consultancy founded by Cameron — same company, same people, new domain and brand. Your data. Your models. Your rules.
 
 ## Contact
 - Email: services@sovtech.pro
@@ -58,7 +58,7 @@ Audit of operations, identification of highest-impact AI opportunities, and a ro
 All work is open-sourced under AGPL-3.0 by default. Custom license releases available for an additional fee.
 
 ## About
-Sovereign Technology SAS grew out of sovIT.xyz, a Bitcoin-native IT consultancy. Founder Cameron has been building and securing systems since childhood — from early websites and wireless security research to enterprise IT at Health First — and now leads Sovereign Technology in deploying and operating sovereign, open-source AI systems across Latin America and beyond.
+Sovereign Technology S.A.S. de C.V. previously went to market as sovIT.xyz, a Bitcoin-native IT consultancy — the same company and the same people under a new domain and brand, not a new business. Founder Cameron has been building and securing systems since childhood — from early websites and wireless security research to enterprise IT at Health First — and now leads Sovereign Technology in deploying and operating sovereign, open-source AI systems and Linux infrastructure across Latin America and beyond.
 
 ## Portfolio
 - sovtech.pro

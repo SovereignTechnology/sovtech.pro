@@ -1,6 +1,6 @@
-# Sovereign Technology SAS — AI Operating Experts — Full Site Content
+# Sovereign Technology S.A.S. de C.V. — AI & Linux Infrastructure — Full Site Content
 
-> Sovereign Technology SAS is an AI operations company registered in El Salvador. We develop, deploy, and run sovereign AI systems for enterprises — on your infrastructure, under your control, with your data. No lock-in. No compromise. Formerly sovIT.xyz, the Bitcoin-native IT consultancy.
+> Sovereign Technology S.A.S. de C.V. is an open-source technology company registered in El Salvador, working across two practice areas: sovereign AI operations and Linux infrastructure — on your hardware, under your control, with your data. No lock-in. No compromise. Previously went to market as sovIT.xyz, the Bitcoin-native IT consultancy — same company, same people, new domain and brand.
 
 Website: https://www.sovtech.pro/
 Email: services@sovtech.pro
@@ -115,11 +115,11 @@ Source: https://github.com/sovitxyz
 
 ## About
 
-### Sovereign Technology SAS
+### Sovereign Technology S.A.S. de C.V.
 
-Sovereign Technology SAS is an AI operations company registered in El Salvador. We are AI infrastructure engineers, ML practitioners, and systems architects who believe AI should serve its owners — not the other way around.
+Sovereign Technology S.A.S. de C.V. is an open-source technology company registered in El Salvador. We are infrastructure engineers, ML practitioners, and systems architects who believe technology should serve its owners — not the other way around.
 
-The company grew out of sovIT.xyz, a Bitcoin-native IT consultancy known for sovereign, open-source infrastructure. That engineering DNA runs through everything we build: self-hosted, auditable, and free of lock-in. Today we develop, deploy, and operate sovereign AI systems for organizations across Latin America and beyond.
+We are the same company that went to market as sovIT.xyz, the Bitcoin-native IT consultancy. Same people, same company — sovtech.pro is a new domain and brand, not a new business. That engineering DNA runs through everything we build: self-hosted, auditable, and free of lock-in. We develop, deploy, and operate sovereign AI systems and Linux infrastructure for organizations across Latin America and beyond.
 
 Operating principles: Sovereignty First (your data, your models, your rules) — Production Grade (not prototypes, production systems) — Open Standards (no lock-in, open source at the core).
 
@@ -157,6 +157,6 @@ Tell us about your project — we respond within 24 hours with a technical asses
 
 ---
 
-© 2026 Sovereign Technology SAS. All rights reserved. Formerly sovIT.xyz.
+© 2026 Sovereign Technology S.A.S. de C.V. All rights reserved. Formerly sovIT.xyz.
 
 Additional catalog: full IT services & pricing (websites, managed IT, networks & smart spaces, sovereign hosting, appliance products, Bitcoin services) at https://www.sovtech.pro/services/

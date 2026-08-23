@@ -65,7 +65,7 @@ const Header = () => {
         <div className="bg-bitcoin text-black" role="status">
           <div className="container mx-auto px-4 py-2 flex items-center justify-center gap-2 text-center">
             <p className="font-mono text-xs md:text-sm font-semibold">
-              sovIT.xyz is now <span className="font-bold">Sovereign Technology</span> — we&apos;ve rebranded.
+              sovIT.xyz is now <span className="font-bold">sovtech.pro</span> — same company, same people, new domain.
               <a
                 href="https://www.sovtech.pro"
                 className="inline-flex items-center gap-1 ml-2 underline underline-offset-2 hover:opacity-80 transition-opacity"

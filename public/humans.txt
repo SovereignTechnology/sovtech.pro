@@ -1,5 +1,5 @@
 /* TEAM */
-Company: Sovereign Technology SAS (El Salvador)
+Company: Sovereign Technology S.A.S. de C.V. (El Salvador)
 Founder: Cameron
 Contact: services@sovtech.pro
 Site: https://www.sovtech.pro/

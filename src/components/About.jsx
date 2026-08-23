@@ -39,21 +39,22 @@ const About = () => {
                 <Building2 className="text-bitcoin" size={24} />
               </div>
               <h3 className="text-2xl font-bold text-white font-mono">
-                <span className="text-bitcoin">&gt;</span> Sovereign Technology SAS
+                <span className="text-bitcoin">&gt;</span> Sovereign Technology S.A.S. de C.V.
               </h3>
             </div>
 
             <div className="space-y-6 text-gray-300 leading-relaxed">
               <p>
-                Sovereign Technology SAS is an AI operations company registered in El Salvador. We are AI infrastructure
-                engineers, ML practitioners, and systems architects who believe AI should serve its owners — not the
-                other way around.
+                Sovereign Technology S.A.S. de C.V. is an open-source technology company registered in El Salvador.
+                We are infrastructure engineers, ML practitioners, and systems architects who believe technology
+                should serve its owners — not the other way around.
               </p>
               <p>
-                The company grew out of <span className="text-bitcoin font-semibold">sovIT.xyz</span>, a Bitcoin-native
-                IT consultancy known for sovereign, open-source infrastructure. That engineering DNA runs through
-                everything we build: self-hosted, auditable, and free of lock-in. Today we develop, deploy, and operate
-                sovereign AI systems for organizations across Latin America and beyond.
+                We are the same company that went to market as <span className="text-bitcoin font-semibold">sovIT.xyz</span>,
+                the Bitcoin-native IT consultancy. Same people, same company — sovtech.pro is a new domain and brand,
+                not a new business. That engineering DNA runs through everything we build: self-hosted, auditable, and
+                free of lock-in. We develop, deploy, and operate sovereign AI systems and Linux infrastructure for
+                organizations across Latin America and beyond.
               </p>
             </div>
 

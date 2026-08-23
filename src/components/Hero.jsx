@@ -105,7 +105,7 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-bitcoin opacity-60"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-bitcoin"></span>
               </span>
-              <span className="font-mono text-sm text-gray-200">Sovereign Technology SAS — AI &amp; Linux Infrastructure</span>
+              <span className="font-mono text-sm text-gray-200">Sovereign Technology S.A.S. de C.V. — AI &amp; Linux Infrastructure</span>
             </div>
           </motion.div>
 
