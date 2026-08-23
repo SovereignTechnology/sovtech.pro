@@ -48,7 +48,7 @@ const Header = () => {
     { label: 'Platform', href: '#platform', secondary: true },
     { label: 'Process', href: '#process', secondary: true },
     { label: 'Pricing', href: '#pricing' },
-    { label: 'About', href: '#about' },
+    { label: 'About', href: '#about', secondary: true },
     { label: 'Contact', href: '#contact' }
   ];
 
@@ -94,9 +94,9 @@ const Header = () => {
           <div className="w-8 h-8 bg-bitcoin rounded flex items-center justify-center font-mono font-bold text-black" aria-hidden="true">
             ◆
           </div>
-          <span className="font-mono text-xl font-bold">
+          <span className="font-mono text-base sm:text-lg lg:text-xl font-bold whitespace-nowrap">
             <span className="text-white">Sovereign</span>
-            <span className="text-bitcoin">Tech</span>
+            <span className="text-bitcoin">Technology</span>
           </span>
         </motion.a>
 
