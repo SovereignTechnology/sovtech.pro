@@ -1,0 +1,4 @@
+# Never upload these as public assets.
+# .htaccess is an Apache (Hostinger) artefact nothing on Cloudflare reads; the old `sovtech`
+# Worker served it publicly at /.htaccess.
+.htaccess

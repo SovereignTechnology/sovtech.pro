@@ -1,0 +1,12 @@
+# Workers static assets headers -- parity with the nginx vhost that served www.sovtech.pro
+# from 2026-09-05 to 2026-09-25 (ipvps etc/nginx/sites-enabled/sovtech.pro.conf).
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Content-hashed filenames, so they are immutable. HTML keeps the default
+# `public, max-age=0, must-revalidate`, so a redeploy is never masked by caching.
+/assets/*
+  Cache-Control: public, max-age=604800, immutable
