@@ -1,6 +1,21 @@
+// sovtech-www -- www.sovtech.pro, the static marketing site: assets only, no Worker code.
+//
+// Back on Cloudflare since 2026-09-25 (it was served by the Kamatera VPS nginx from 2026-09-05,
+// while the rDNS review needed every name on Kamatera; the PTR is granted now).
+//   * The apex sovtech.pro is NOT here and must not be: its A record stays on the VPS (the PTR is
+//     sovtech.pro and postfix HELOs as it), and its TLS ends on l5400 apex-edge, which serves the
+//     NIP-05 file and 301s everything else to www.
+//   * The planning-agent Worker `sovtech` (feat/planning-agent-*) is a DIFFERENT Worker and is left
+//     untouched; its isolated staging `sovtech-test` runs at pre.sovtech.pro.
+// Deploy: npm ci && npm run build && CLOUDFLARE_ACCOUNT_ID=<Sovereign IT> npx wrangler deploy
+// Security headers live in public/_headers (parity with the old nginx vhost).
 {
-  "name": "sovtech",
+  "name": "sovtech-www",
   "compatibility_date": "2026-02-08",
+  // No second public hostname (sovtech-www.<acct>.workers.dev) and no per-version preview URLs.
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "www.sovtech.pro", "custom_domain": true }],
   "assets": {
     "directory": "./dist"
   }
