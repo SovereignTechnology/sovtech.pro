@@ -5,7 +5,8 @@
 Website: https://www.sovtech.pro/
 Email: services@sovtech.pro
 Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
-GitHub: https://github.com/sovitxyz
+GitHub: https://github.com/SovereignTechnology
+Nostr: https://ditto.pub/npub1s0vtechh66tx7vrwdud8zfyheu9zca7swwfrzd4qu2a4f93mxs6qvn9adx (SovereignTechnology@sovtech.pro)
 GitLab: https://sovit.xyz/gitlab/
 Git (Nostr/NIP-34): https://git.sovit.xyz
 Git (Nostr/NIP-34): https://git.sovtech.pro
@@ -112,7 +113,7 @@ You have the freedom to use, modify, and deploy your own updates to the code we 
 
 Custom license releases are available for an additional fee — allowing proprietary use or alternative licensing terms when required.
 
-Source: https://github.com/sovitxyz
+Source: https://github.com/SovereignTechnology
 Mirrors: https://sovit.xyz/gitlab/ · https://git.sovit.xyz · https://git.sovtech.pro
 
 ---

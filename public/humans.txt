@@ -3,7 +3,8 @@ Company: Sovereign Technology S.A.S. de C.V. (El Salvador)
 Founder: Cameron
 Contact: services@sovtech.pro
 Site: https://www.sovtech.pro/
-GitHub: https://github.com/sovitxyz
+GitHub: https://github.com/SovereignTechnology
+Nostr: https://ditto.pub/npub1s0vtechh66tx7vrwdud8zfyheu9zca7swwfrzd4qu2a4f93mxs6qvn9adx (SovereignTechnology@sovtech.pro)
 GitLab: https://sovit.xyz/gitlab/
 Git (Nostr/NIP-34): https://git.sovit.xyz
 Git (Nostr/NIP-34): https://git.sovtech.pro
