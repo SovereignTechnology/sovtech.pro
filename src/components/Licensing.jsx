@@ -80,7 +80,7 @@ const Licensing = () => {
             {/* Source links */}
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href="https://github.com/sovitxyz"
+                href="https://github.com/SovereignTechnology"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-mono text-sm bg-bitcoin/10 text-bitcoin px-4 py-2 rounded-lg border border-bitcoin/50 hover:bg-bitcoin/20 transition-colors"

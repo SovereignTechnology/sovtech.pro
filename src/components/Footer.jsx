@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Gitlab, GitBranch, Mail } from 'lucide-react';
+import { Github, Gitlab, GitBranch, Mail, Zap } from 'lucide-react';
 import { CONTACT_EMAIL } from '@/lib/contact';
 import BrandMark from '@/components/BrandMark';
 
@@ -54,7 +54,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               <motion.a
-                href="https://github.com/sovitxyz"
+                href="https://github.com/SovereignTechnology"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -74,6 +74,17 @@ const Footer = () => {
                 title="GitLab"
               >
                 <Gitlab size={18} className="text-bitcoin" />
+              </motion.a>
+              <motion.a
+                href="https://ditto.pub/npub1s0vtechh66tx7vrwdud8zfyheu9zca7swwfrzd4qu2a4f93mxs6qvn9adx"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="w-10 h-10 bg-gray-900 border border-bitcoin/30 rounded-lg flex items-center justify-center hover:bg-bitcoin/10 hover:border-bitcoin transition-all"
+                aria-label="Nostr: SovereignTechnology@sovtech.pro"
+                title="Nostr · SovereignTechnology@sovtech.pro"
+              >
+                <Zap size={18} className="text-bitcoin" />
               </motion.a>
               <motion.a
                 href={`mailto:${CONTACT_EMAIL}`}
