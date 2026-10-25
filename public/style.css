@@ -1,0 +1,125 @@
+:root {
+  --bg: #fbfaf7;
+  --text: #1c1b19;
+  --muted: #5f5b54;
+  --rule: #e4e0d8;
+  /* 5.2:1 on --bg; plain #F7931A is too light to read as text on a light page */
+  --link: #a8510a;
+  --link-hover: #7a3a05;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141311;
+    --text: #e8e5df;
+    --muted: #a39e95;
+    --rule: #2c2a26;
+    --link: #f7931a;
+    --link-hover: #ffb054;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 1.0625rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+
+main, footer {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 3.5rem 0 1.75rem;
+}
+
+.intro img {
+  flex: none;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+h2 {
+  margin: 3rem 0 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: 1.125rem;
+}
+
+h3 {
+  margin: 1.75rem 0 0.35rem;
+  font-size: 1.0625rem;
+}
+
+.status {
+  margin-left: 0.4rem;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+p { margin: 0 0 1rem; }
+
+.links {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.small { padding-left: 1.1rem; }
+.small li { margin-bottom: 0.75rem; }
+
+a {
+  color: var(--link);
+  text-underline-offset: 0.15em;
+}
+
+a:hover { color: var(--link-hover); }
+
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+footer p { margin-bottom: 0.75rem; }
+
+@media (max-width: 30rem) {
+  .intro { margin-top: 2.25rem; }
+  .intro img { width: 72px; height: 72px; }
+}
+
+.notfound { margin-top: 3.5rem; }
+.nowrap { white-space: nowrap; }

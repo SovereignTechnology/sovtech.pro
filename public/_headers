@@ -1,12 +1,9 @@
-# Workers static assets headers -- parity with the nginx vhost that served www.sovtech.pro
-# from 2026-09-05 to 2026-09-25 (ipvps etc/nginx/sites-enabled/sovtech.pro.conf).
+# Workers static assets headers. The site is plain HTML + CSS with no scripts and no
+# third-party requests, so the CSP allows only same-origin styles and images.
+# HTML and CSS keep the default `public, max-age=0, must-revalidate`, so a redeploy shows at once.
 /*
   Strict-Transport-Security: max-age=63072000; includeSubDomains
+  Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
   X-Content-Type-Options: nosniff
-  X-Frame-Options: SAMEORIGIN
+  X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
-
-# Content-hashed filenames, so they are immutable. HTML keeps the default
-# `public, max-age=0, must-revalidate`, so a redeploy is never masked by caching.
-/assets/*
-  Cache-Control: public, max-age=604800, immutable

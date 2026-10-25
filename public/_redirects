@@ -1,2 +1,3 @@
-/wemake/* https://sovit.xyz/wemake/:splat 301
-/wemake https://sovit.xyz/wemake/ 301
+# The old service catalog and its anchors live on as the "Work with me" section.
+/services /  301
+/services/* /  301

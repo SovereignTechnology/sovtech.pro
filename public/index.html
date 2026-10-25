@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Cameron · Sovereign Technology</title>
+  <meta name="description" content="I'm Cameron. I build open-source software on Nostr and Bitcoin from El Salvador and run my own servers. This is what I'm working on.">
+  <link rel="canonical" href="https://www.sovtech.pro/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/style.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sovtech.pro/">
+  <meta property="og:site_name" content="sovtech.pro">
+  <meta property="og:title" content="Cameron · Sovereign Technology">
+  <meta property="og:description" content="Open-source software on Nostr and Bitcoin, built from El Salvador. This is what I'm working on.">
+  <meta property="og:image" content="https://www.sovtech.pro/og.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="Cameron, smiling, in front of a wall of big green leaves">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+<main>
+
+  <header class="intro">
+    <img src="/cam.jpg" width="160" height="160" alt="Cameron, smiling, in front of a wall of big green leaves">
+    <div>
+      <h1>Cameron</h1>
+      <p class="tagline"><span class="nowrap">Sovereign Technology</span> · <span class="nowrap">El Salvador</span></p>
+    </div>
+  </header>
+
+  <p>Hi, I'm Cameron. I grew up in Florida and live in El Salvador now with my family. I build
+  open-source software, mostly on Nostr and Bitcoin, and I run my own servers instead of renting
+  someone else's. Sovereign Technology is the company I do it under.</p>
+
+  <h2>What I'm working on</h2>
+
+  <h3>Nutflix and NFX <span class="status">pre-release</span></h3>
+  <p>Peer-to-peer video where the people who share a video get paid by the people watching it.
+  Videos are announced on Nostr, streamed from other viewers' computers, and paid for piece by piece
+  in Cashu ecash. The creator sets the price, and you see it before you press play.</p>
+  <p>There are two versions. Nutflix is the desktop app. Version 0.1.0 for Linux came out on
+  5 October, and it's a demo for now, not something to trust with real money. NFX is the open spec
+  plus a Rust version built on iroh. Publishing, sharing and playing work in testing. Payments
+  aren't wired in yet.</p>
+  <p class="links">
+    <a href="https://nutflix.xyz" rel="noopener noreferrer">nutflix.xyz</a> ·
+    <a href="https://github.com/SovereignTechnology/nutflix-pear" rel="noopener noreferrer">Nutflix desktop</a> ·
+    <a href="https://github.com/SovereignTechnology/nfx" rel="noopener noreferrer">NFX</a> ·
+    <a href="https://gitworkshop.dev/npub1s0vtechh66tx7vrwdud8zfyheu9zca7swwfrzd4qu2a4f93mxs6qvn9adx/nfx" rel="noopener noreferrer">NFX on Nostr</a>
+  </p>
+
+  <h3>Private git over Nostr <span class="status">experimental</span></h3>
+  <p>Git on Nostr already lets you host code without GitHub, but everything on it is public. I'm
+  working on private repositories that can sit on a server you don't trust. <span class="nowrap">cord-git</span> encrypts
+  everything before it's uploaded and handles the keys, members and invites, so the server only
+  ever stores ciphertext. The server half isn't public yet.</p>
+  <p>I also run <a href="https://git.sovtech.pro" rel="noopener noreferrer">git.sovtech.pro</a>, my build of
+  <a href="https://gitworkshop.dev" rel="noopener noreferrer">GitWorkshop</a>, the web client for git
+  over Nostr. I keep it close to upstream on purpose.</p>
+  <p class="links">
+    <a href="https://github.com/SovereignTechnology/cord-git" rel="noopener noreferrer">cord-git</a> ·
+    <a href="https://github.com/SovereignTechnology/sovtech-git" rel="noopener noreferrer">git.sovtech.pro source</a>
+  </p>
+
+  <h3>BIES, Build in El Salvador <span class="status">live</span></h3>
+  <p>A Nostr app for the Build in El Salvador community: a feed, encrypted messages, a member
+  directory, events, project pages and Lightning payments, in English and Spanish. Your account is
+  your own Nostr key, so it goes with you if you ever leave. nostrbook is the same idea made general,
+  for any community.</p>
+  <p class="links">
+    <a href="https://app.buildinelsalvador.com" rel="noopener noreferrer">app.buildinelsalvador.com</a> ·
+    <a href="https://github.com/Build-in-El-Salvador/BIES-app" rel="noopener noreferrer">BIES source</a> ·
+    <a href="https://github.com/SovereignTechnology/nostrbook-client" rel="noopener noreferrer">nostrbook</a>
+  </p>
+
+  <h2>Smaller things</h2>
+  <ul class="small">
+    <li><a href="https://keytr.org" rel="noopener noreferrer">keytr</a>: log in to Nostr with a
+    passkey. Your key is encrypted with the passkey and kept on relays, so any device that has the
+    passkey can sign you in.
+    (<a href="https://github.com/SovereignTechnology/keytr" rel="noopener noreferrer">source</a>)</li>
+    <li><a href="https://nbread.lol" rel="noopener noreferrer">nbread</a>: blogging on Nostr. Your
+    posts are signed by your key, and nbread just shows them, quickly, at you.nbread.lol.
+    (<a href="https://github.com/SovereignTechnology/nbread" rel="noopener noreferrer">source</a>)</li>
+  </ul>
+
+  <h2>Running my own stuff</h2>
+  <p>I don't like depending on big platforms, so I host almost everything myself: git, email,
+  passwords, notes, the VPN that ties my machines together, and the login for all of it. Each
+  service runs in its own small virtual machine on hardware I own, and no third party decrypts the
+  traffic on the way in. It's a lot of work. It's also the best way I know to learn how this stuff
+  really works, and most of what I do for clients I tried on my own setup first.</p>
+
+  <h2>How I got here</h2>
+  <p>I started on PCs young, mostly gaming. In elementary school my brother and I made videos and
+  little animations in Movie Maker. At 11 I was making websites from Zoomshare templates, mostly by
+  copying my favorite Flash games into them, and around then I got into competitive FPS games and
+  built my first computer. At 13 Santa brought me a netbook. I put Kali Linux on it, got an Alfa
+  wireless adapter, and learned how WEP networks get cracked. I started writing VB.NET and piecing
+  together open-source C++ around then too.</p>
+  <p>In high school I was the one everybody brought their computer to: family, friends from church,
+  classmates, even a few teachers. Later I worked in IT at Health First. Now I run Sovereign
+  Technology from El Salvador.</p>
+
+  <h2>Work with me</h2>
+  <p>I also do client work: Linux servers and self-hosted infrastructure, private AI that runs on
+  your own hardware, Bitcoin and Lightning payments, and websites. A few sites I've built:
+  <a href="https://whatarush.org" rel="noopener noreferrer">What A Rush</a> (horse-assisted therapy),
+  <a href="https://www.gcs.sv" rel="noopener noreferrer">GCS</a> (a construction company, where I also
+  set up ERPNext with El Salvador's electronic invoicing),
+  <a href="https://www.beefbackbetter.com" rel="noopener noreferrer">Beef Back Better</a> and
+  <a href="https://bitcoinsgym.com" rel="noopener noreferrer">Bitcoin's Gym</a>.</p>
+  <p>If you have something in mind, email me at
+  <a href="mailto:services@sovtech.pro">services@sovtech.pro</a>.</p>
+
+</main>
+
+<footer>
+  <p>
+    <a href="https://github.com/SovereignTechnology" rel="noopener noreferrer">GitHub</a> ·
+    <a href="https://ditto.pub/npub1s0vtechh66tx7vrwdud8zfyheu9zca7swwfrzd4qu2a4f93mxs6qvn9adx" rel="noopener noreferrer">Nostr</a>
+    (SovereignTechnology@sovtech.pro) ·
+    <a href="https://git.sovtech.pro" rel="noopener noreferrer">git.sovtech.pro</a> ·
+    <a href="mailto:services@sovtech.pro">Email</a>
+  </p>
+  <p>Sovereign Technology S.A.S. de C.V., El Salvador. Formerly sovIT.xyz.<br>
+  Updated October 2026.</p>
+</footer>
+</body>
+</html>

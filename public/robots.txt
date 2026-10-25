@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://www.sovtech.pro/sitemap.xml
-
-# AI / LLM content
-# See https://llmstxt.org/
-# llms.txt provides a structured overview; llms-full.txt provides complete site content

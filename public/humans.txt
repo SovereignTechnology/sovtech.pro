@@ -1,17 +1,11 @@
 /* TEAM */
+Cameron, founder
 Company: Sovereign Technology S.A.S. de C.V. (El Salvador)
-Founder: Cameron
 Contact: services@sovtech.pro
-Site: https://www.sovtech.pro/
 GitHub: https://github.com/SovereignTechnology
-Nostr: https://ditto.pub/npub1s0vtechh66tx7vrwdud8zfyheu9zca7swwfrzd4qu2a4f93mxs6qvn9adx (SovereignTechnology@sovtech.pro)
-GitLab: https://sovit.xyz/gitlab/
-Git (Nostr/NIP-34): https://git.sovit.xyz
+Nostr: SovereignTechnology@sovtech.pro
 Git (Nostr/NIP-34): https://git.sovtech.pro
 
 /* SITE */
-Standards: HTML5, CSS3, ES2020
-Components: React, Vite, Tailwind CSS, Framer Motion
-License: AGPL-3.0
-Onion: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
-Formerly: sovIT.xyz (https://www.sovit.xyz)
+Plain HTML and CSS. No JavaScript, no trackers, no web fonts.
+Formerly: sovIT.xyz
