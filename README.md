@@ -29,6 +29,32 @@ page text: `sovereign-technology.svg` uses the light theme's `--text`, and
 in `style.css`, change the fill in that file too. A `<picture>` picks the file by the
 visitor's colour scheme, the same way the stylesheet does.
 
+## Search and sharing
+
+- **Structured data.** Each page ends its `<head>` with one `application/ld+json` block
+  describing the site, the page, me and the company, with the four "Work with me" services.
+  It is data, not script: the CSP does not apply to it, and the pages still run no
+  JavaScript. Keep the two pages' blocks in step, and only state what the page itself says
+  (Google's rule). `@id`s are absolute (`https://www.sovtech.pro/#org` and so on) so both
+  pages describe the same entities.
+- **Titles and descriptions.** Titles stay within 60 characters and descriptions within
+  155, so search results show them whole. `og:description` repeats the description.
+- **Share card.** `public/share.jpg` (1200×630) is the link preview (`og:image`,
+  `summary_large_image`). It was drawn once from `og.jpg`, the wordmark and Noto Sans; if
+  the photo or wordmark changes, redraw it. `og.jpg` stays as the photo in the structured
+  data, and `public/logo/sovereign-technology.png` is the company logo there.
+- **Section anchors.** Each `h2` has an `id` (English and Spanish slugs), and the old
+  `/services` URLs land on `/#work-with-me` (`public/_redirects`).
+- **Caching.** Images get `max-age=86400` in `public/_headers`; HTML and CSS stay at
+  `max-age=0` so a deploy shows at once.
+- **IndexNow.** `npm run deploy` ends with `postdeploy`, which posts the two page URLs
+  from `indexnow.json` to `api.indexnow.org` (shared with Bing, Yandex, Seznam and Naver).
+  The key in `public/<key>.txt` is public by design; it only proves the ping comes from
+  this site. If a new page is added, add it to `indexnow.json` and `sitemap.xml`.
+- **robots.txt** is Cloudflare's managed one (search allowed, AI training blocked), with
+  our `Sitemap:` line kept at the end. Indexing is watched in Google Search Console and
+  Bing Webmaster Tools, as a domain property for `sovtech.pro` (Cam's accounts).
+
 ## Preview
 
 ```sh

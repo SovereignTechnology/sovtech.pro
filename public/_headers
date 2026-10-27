@@ -9,3 +9,15 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
+
+# Images change rarely: let browsers and the edge keep them for a day.
+/logo/*
+  Cache-Control: public, max-age=86400
+/cam.jpg
+  Cache-Control: public, max-age=86400
+/og.jpg
+  Cache-Control: public, max-age=86400
+/share.jpg
+  Cache-Control: public, max-age=86400
+/favicon.png
+  Cache-Control: public, max-age=86400
