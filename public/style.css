@@ -37,11 +37,18 @@ main, footer {
   padding: 0 1rem;
 }
 
+.lang {
+  margin: 1.25rem 0 0;
+  text-align: right;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
 .intro {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin: 3.5rem 0 1.75rem;
+  margin: 1.75rem 0 1.75rem;
 }
 
 .intro img {
@@ -117,7 +124,7 @@ footer {
 footer p { margin-bottom: 0.75rem; }
 
 @media (max-width: 30rem) {
-  .intro { margin-top: 2.25rem; }
+  .intro { margin-top: 1.25rem; }
   .intro img { width: 72px; height: 72px; }
 }
 

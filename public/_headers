@@ -1,6 +1,8 @@
 # Workers static assets headers. The site is plain HTML + CSS with no scripts and no
 # third-party requests, so the CSP allows only same-origin styles and images.
 # HTML and CSS keep the default `public, max-age=0, must-revalidate`, so a redeploy shows at once.
+# "/" is answered by the Worker, which this file does not reach: keep the block below in step with
+# SECURITY_HEADERS in src/index.js.
 /*
   Strict-Transport-Security: max-age=63072000; includeSubDomains
   Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'

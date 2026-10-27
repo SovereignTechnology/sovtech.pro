@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Cameron · Sovereign Technology</title>
+  <meta name="description" content="Soy Cameron. Desde El Salvador hago software de código abierto sobre Nostr y Bitcoin, y corro mis propios servidores. Esto es en lo que estoy trabajando.">
+  <link rel="canonical" href="https://www.sovtech.pro/es/">
+  <link rel="alternate" hreflang="en" href="https://www.sovtech.pro/">
+  <link rel="alternate" hreflang="es" href="https://www.sovtech.pro/es/">
+  <link rel="alternate" hreflang="x-default" href="https://www.sovtech.pro/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/style.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sovtech.pro/es/">
+  <meta property="og:site_name" content="sovtech.pro">
+  <meta property="og:locale" content="es_SV">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Cameron · Sovereign Technology">
+  <meta property="og:description" content="Software de código abierto sobre Nostr y Bitcoin, hecho desde El Salvador. Esto es en lo que estoy trabajando.">
+  <meta property="og:image" content="https://www.sovtech.pro/og.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="Cameron sonriendo frente a una pared de hojas verdes grandes">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+<main>
+
+  <nav class="lang" aria-label="Idioma">
+    <a href="/?lang=en" hreflang="en" lang="en">English</a> · <span aria-current="page">Español</span>
+  </nav>
+
+  <header class="intro">
+    <img src="/cam.jpg" width="160" height="160" alt="Cameron sonriendo frente a una pared de hojas verdes grandes">
+    <div>
+      <h1>Cameron</h1>
+      <p class="tagline"><span class="nowrap">Sovereign Technology</span> · <span class="nowrap">El Salvador</span></p>
+    </div>
+  </header>
+
+  <p>Hola, soy Cameron. Crecí en Florida y ahora vivo en El Salvador con mi familia. Hago software
+  de código abierto, sobre todo en Nostr y Bitcoin, y corro mis propios servidores en vez de alquilar
+  los de alguien más. Sovereign Technology es la empresa bajo la que hago todo esto.</p>
+
+  <h2>En qué estoy trabajando</h2>
+  <p>Casi todos mis proyectos de código abierto los publico en Nostr con
+  <a href="https://ngit.dev" rel="noopener noreferrer">ngit</a>, y cada uno tiene también un espejo
+  en GitHub. Los enlaces al código de esta página van a GitHub.</p>
+
+  <h3>Nutflix y NFX <span class="status">preliminar</span></h3>
+  <p>Video peer-to-peer donde quienes comparten un video cobran a quienes lo están viendo. Los videos
+  se anuncian en Nostr, se transmiten desde las computadoras de otros espectadores y se pagan pedacito
+  a pedacito con ecash de Cashu. El creador pone el precio, y vos lo ves antes de darle play.</p>
+  <p>Hay dos versiones. Nutflix es la app de escritorio. La versión 0.1.0 para Linux salió el
+  5 de octubre, y por ahora es una demo, no algo para confiarle dinero de verdad. NFX es la
+  especificación abierta más una versión en Rust hecha sobre iroh. Publicar, compartir y reproducir
+  ya funcionan en pruebas. Los pagos todavía no están conectados.</p>
+  <p class="links">
+    <a href="https://nutflix.xyz" rel="noopener noreferrer">nutflix.xyz</a> ·
+    <a href="https://github.com/SovereignTechnology/nutflix-pear" rel="noopener noreferrer">Nutflix de escritorio</a> ·
+    <a href="https://github.com/SovereignTechnology/nfx" rel="noopener noreferrer">NFX</a> ·
+    <a href="https://gitworkshop.dev/npub1s0vtechh66tx7vrwdud8zfyheu9zca7swwfrzd4qu2a4f93mxs6qvn9adx/nfx" rel="noopener noreferrer">NFX en Nostr</a>
+  </p>
+
+  <h3>Git privado sobre Nostr <span class="status">experimental</span></h3>
+  <p>Git en Nostr ya te deja alojar código sin GitHub, pero todo lo que hay ahí es público. Estoy
+  trabajando en repositorios privados que pueden estar en un servidor en el que no confiás.
+  <span class="nowrap">cord-git</span> cifra todo antes de subirlo y maneja las llaves, los miembros
+  y las invitaciones, así que el servidor solo guarda datos cifrados. La parte del servidor es
+  <span class="nowrap">grasp-p</span>, mi fork del servidor git ngit-grasp.</p>
+  <p>También corro <a href="https://git.sovtech.pro" rel="noopener noreferrer">git.sovtech.pro</a>, mi
+  versión de <a href="https://gitworkshop.dev" rel="noopener noreferrer">GitWorkshop</a>, el cliente
+  web para git sobre Nostr. La mantengo cerca de la versión original a propósito.</p>
+  <p class="links">
+    <a href="https://github.com/SovereignTechnology/cord-git" rel="noopener noreferrer">cord-git</a> ·
+    <a href="https://github.com/SovereignTechnology/grasp-p" rel="noopener noreferrer">grasp-p</a> ·
+    <a href="https://github.com/SovereignTechnology/sovtech-git" rel="noopener noreferrer">código de git.sovtech.pro</a>
+  </p>
+
+  <h3>BIES, Build in El Salvador <span class="status">activo</span></h3>
+  <p>Una app de Nostr para la comunidad de Build in El Salvador: un feed, mensajes cifrados, un
+  directorio de miembros, eventos, páginas de proyectos y pagos con Lightning, en inglés y español.
+  Tu cuenta es tu propia llave de Nostr, así que se va con vos si algún día te vas. nostrbook es la
+  misma idea pero general, para cualquier comunidad.</p>
+  <p class="links">
+    <a href="https://app.buildinelsalvador.com" rel="noopener noreferrer">app.buildinelsalvador.com</a> ·
+    <a href="https://github.com/Build-in-El-Salvador/BIES-app" rel="noopener noreferrer">código de BIES</a> ·
+    <a href="https://github.com/SovereignTechnology/nostrbook-client" rel="noopener noreferrer">nostrbook</a>
+  </p>
+
+  <h2>Cosas más pequeñas</h2>
+  <ul class="small">
+    <li><a href="https://keytr.org" rel="noopener noreferrer">keytr</a>: iniciá sesión en Nostr con
+    una passkey. Tu llave se cifra con la passkey y se guarda en relays, así que cualquier dispositivo
+    que tenga la passkey puede iniciar tu sesión.
+    (<a href="https://github.com/SovereignTechnology/keytr" rel="noopener noreferrer">código</a>)</li>
+    <li><a href="https://nbread.lol" rel="noopener noreferrer">nbread</a>: blogs en Nostr. Tus
+    publicaciones van firmadas con tu llave, y nbread solo las muestra, rápido, en
+    tunombre.nbread.lol.
+    (<a href="https://github.com/SovereignTechnology/nbread" rel="noopener noreferrer">código</a>)</li>
+    <li>Nostreward: un sistema de recompensas hecho sobre Nostr. Repartís códigos para canjear con un
+    producto, una promoción o lo que sea, y cuando alguien canjea uno, el bot puede mandarle un zap,
+    republicar su nota o darle acceso a un relay privado.
+    (<a href="https://github.com/SovereignTechnology/Nostreward" rel="noopener noreferrer">código</a>)</li>
+  </ul>
+
+  <h2>Todo en mis propios servidores</h2>
+  <p>No me gusta depender de las grandes plataformas, así que alojo casi todo yo mismo: git, correo,
+  contraseñas, notas, la VPN que conecta mis máquinas y el inicio de sesión de todo eso. Cada
+  servicio corre en su propia máquina virtual pequeña, en hardware que es mío, y ningún tercero
+  descifra el tráfico en el camino. Es bastante trabajo. También es la mejor manera que conozco de
+  aprender cómo funciona todo esto de verdad, y casi todo lo que hago para clientes lo probé primero
+  en mis propios equipos.</p>
+  <p>También tengo mi propio asistente de IA, hecho sobre
+  <a href="https://openclaw.ai" rel="noopener noreferrer">OpenClaw</a>, el agente de código abierto.
+  Hace trabajo real para mí, no solo chatea. Para todo lo privado usa
+  <a href="https://maple.ai" rel="noopener noreferrer">Maple</a>, IA privada que corre sus modelos
+  dentro de enclaves de hardware seguros (TEE), así que ni Maple puede leer lo que le mando.</p>
+
+  <h2>Cómo llegué aquí</h2>
+  <p>Empecé con las computadoras desde chiquito, sobre todo jugando. En la primaria, mi hermano y yo
+  hacíamos videos y animaciones con Movie Maker. A los 11 ya hacía sitios web con plantillas de
+  Zoomshare, casi siempre metiéndoles mis juegos Flash favoritos, y por esa época me metí en los
+  juegos FPS competitivos y armé mi primera computadora. A los 13, Santa me trajo una netbook. Le
+  instalé Kali Linux, conseguí un adaptador inalámbrico Alfa y aprendí cómo se crackean las redes
+  WEP. Por esa época también empecé a escribir VB.NET y a armar pedazos de C++ de código abierto.</p>
+  <p>En la secundaria yo era al que todos le llevaban su computadora: la familia, amigos de la
+  iglesia, compañeros de clase y hasta algunos profesores. Después trabajé en TI en Health First.
+  Ahora dirijo Sovereign Technology desde El Salvador.</p>
+
+  <h2>Trabajemos juntos</h2>
+  <p>También hago trabajo para clientes: servidores Linux e infraestructura autoalojada, IA privada
+  que corre en tu propio hardware, pagos con Bitcoin y Lightning, y sitios web. Dos que hice yo:
+  <a href="https://whatarush.org" rel="noopener noreferrer">What A Rush</a> (terapia asistida con
+  caballos;
+  <a href="https://github.com/SovereignTechnology/whatarush.org" rel="noopener noreferrer">código</a>)
+  y <a href="https://renaissance.rodeo" rel="noopener noreferrer">Renaissance Rodeo</a>
+  (<a href="https://github.com/SovereignTechnology/renaissance-rodeo" rel="noopener noreferrer">código</a>),
+  donde también monté el sistema de boletos, cobrando en Bitcoin con BTCPay Server, con mis propias
+  correcciones al plugin de pagos
+  (<a href="https://github.com/SovereignTechnology/pretix-bitpay" rel="noopener noreferrer">código</a>).
+  También me encargo del sitio del
+  <a href="https://bitcoinfarmersmarket.org" rel="noopener noreferrer">Bitcoin Farmers Market</a>,
+  un mercado en la costa de Surf City donde se prefiere Bitcoin
+  (<a href="https://github.com/SovereignTechnology/bitcoinfarmersmarket.org" rel="noopener noreferrer">código</a>).</p>
+  <p>Si tenés algo en mente, escribime a
+  <a href="mailto:services@sovtech.pro">services@sovtech.pro</a>.</p>
+
+</main>
+
+<footer>
+  <p>
+    <a href="https://github.com/SovereignTechnology" rel="noopener noreferrer">GitHub</a> ·
+    <a href="https://ditto.pub/npub1s0vtechh66tx7vrwdud8zfyheu9zca7swwfrzd4qu2a4f93mxs6qvn9adx" rel="noopener noreferrer">Nostr</a>
+    (SovereignTechnology@sovtech.pro) ·
+    <a href="https://git.sovtech.pro" rel="noopener noreferrer">git.sovtech.pro</a> ·
+    <a href="mailto:services@sovtech.pro">Correo</a>
+  </p>
+  <p>Sovereign Technology S.A.S. de C.V., El Salvador. Antes sovIT.xyz.<br>
+  Actualizado en octubre de 2026.</p>
+</footer>
+</body>
+</html>

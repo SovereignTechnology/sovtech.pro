@@ -1,5 +1,6 @@
 // sovtech-www -- www.sovtech.pro: Cameron's personal page, plain HTML + CSS served as static
-// assets. There is no Worker code and no build step: public/ is the site, byte for byte.
+// assets, in English (/) and Spanish (/es/). No build step: public/ is the site, byte for byte.
+// The only Worker code, src/index.js, runs for "/" alone and picks the language there.
 //
 //   * The apex sovtech.pro is NOT here and must not be: its A record stays on the VPS (the PTR is
 //     sovtech.pro and postfix HELOs as it), and its TLS ends on l5400 apex-edge, which serves the
@@ -7,9 +8,11 @@
 //   * The planning-agent Worker `sovtech` (feat/planning-agent-*) is a DIFFERENT Worker and is left
 //     untouched; its isolated staging `sovtech-test` runs at pre.sovtech.pro.
 // Preview: npm ci && npm run dev    Deploy (clean main only): CLOUDFLARE_ACCOUNT_ID=<Sovereign IT> npm run deploy
-// Security headers and the CSP live in public/_headers; old paths are redirected in public/_redirects.
+// Security headers and the CSP live in public/_headers, and again in src/index.js for "/" (Cloudflare
+// does not apply _headers to Worker responses); old paths are redirected in public/_redirects.
 {
   "name": "sovtech-www",
+  "main": "src/index.js",
   "compatibility_date": "2026-02-08",
   // No second public hostname (sovtech-www.<acct>.workers.dev) and no per-version preview URLs.
   "workers_dev": false,
@@ -17,6 +20,10 @@
   "routes": [{ "pattern": "www.sovtech.pro", "custom_domain": true }],
   "assets": {
     "directory": "./public",
+    "binding": "ASSETS",
+    // Only "/" reaches the Worker; every other path is served from public/ directly.
+    "run_worker_first": ["/"],
+    // The nearest 404.html wins, so /es/* gets public/es/404.html.
     "not_found_handling": "404-page"
   }
 }
