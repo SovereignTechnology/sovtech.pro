@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Cameron · Sovereign Technology</title>
-  <meta name="description" content="I'm Cameron. I build open-source software on Nostr and Bitcoin from El Salvador and run my own servers. This is what I'm working on.">
+  <title>Cam · Sovereign Technology</title>
+  <meta name="description" content="I'm Cam. I build open-source software on Nostr and Bitcoin from El Salvador and run my own servers. This is what I'm working on.">
   <link rel="canonical" href="https://www.sovtech.pro/">
   <link rel="alternate" hreflang="en" href="https://www.sovtech.pro/">
   <link rel="alternate" hreflang="es" href="https://www.sovtech.pro/es/">
@@ -18,37 +18,41 @@
   <meta property="og:site_name" content="sovtech.pro">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_SV">
-  <meta property="og:title" content="Cameron · Sovereign Technology">
+  <meta property="og:title" content="Cam · Sovereign Technology">
   <meta property="og:description" content="Open-source software on Nostr and Bitcoin, built from El Salvador. This is what I'm working on.">
   <meta property="og:image" content="https://www.sovtech.pro/og.jpg">
   <meta property="og:image:width" content="600">
   <meta property="og:image:height" content="600">
-  <meta property="og:image:alt" content="Cameron, smiling, in front of a wall of big green leaves">
+  <meta property="og:image:alt" content="Cam, smiling, in front of a wall of big green leaves">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-<main>
-
+<header class="masthead">
+  <a class="brand" href="/">
+    <picture>
+      <source srcset="/logo/sovereign-technology-dark.svg" media="(prefers-color-scheme: dark)">
+      <img src="/logo/sovereign-technology.svg" width="190" height="22" alt="Sovereign Technology">
+    </picture>
+  </a>
   <nav class="lang" aria-label="Language">
     <span aria-current="page">English</span> · <a href="/?lang=es" hreflang="es" lang="es">Español</a>
   </nav>
+</header>
+<main>
 
   <header class="intro">
-    <img src="/cam.jpg" width="160" height="160" alt="Cameron, smiling, in front of a wall of big green leaves">
+    <img src="/cam.jpg" width="160" height="160" alt="Cam, smiling, in front of a wall of big green leaves">
     <div>
-      <h1>Cameron</h1>
+      <h1>Cam</h1>
       <p class="tagline"><span class="nowrap">Sovereign Technology</span> · <span class="nowrap">El Salvador</span></p>
     </div>
   </header>
 
-  <p>Hi, I'm Cameron. I grew up in Florida and live in El Salvador now with my family. I build
+  <p>Hi, I'm Cam. I grew up in Florida and live in El Salvador now with my family. I build
   open-source software, mostly on Nostr and Bitcoin, and I run my own servers instead of renting
   someone else's. Sovereign Technology is the company I do it under.</p>
 
   <h2>What I'm working on</h2>
-  <p>I mostly publish my open-source projects on Nostr with
-  <a href="https://ngit.dev" rel="noopener noreferrer">ngit</a>, and every one also has a GitHub
-  mirror. The source links on this page go to GitHub.</p>
 
   <h3>Nutflix and NFX <span class="status">pre-release</span></h3>
   <p>Peer-to-peer video where the people who share a video get paid by the people watching it.
@@ -71,7 +75,9 @@
   everything before it's uploaded and handles the keys, members and invites, so the server only
   ever stores ciphertext. The server half is <span class="nowrap">grasp-p</span>, my fork of the
   ngit-grasp git server.</p>
-  <p>I also run <a href="https://git.sovtech.pro" rel="noopener noreferrer">git.sovtech.pro</a>, my build of
+  <p>I publish my own open-source projects on Nostr too, with
+  <a href="https://ngit.dev" rel="noopener noreferrer">ngit</a>, and mirror each one to GitHub. I also
+  run <a href="https://git.sovtech.pro" rel="noopener noreferrer">git.sovtech.pro</a>, my build of
   <a href="https://gitworkshop.dev" rel="noopener noreferrer">GitWorkshop</a>, the web client for git
   over Nostr. I keep it close to upstream on purpose.</p>
   <p class="links">

@@ -1,5 +1,6 @@
 :root {
   --bg: #fbfaf7;
+  /* public/logo/sovereign-technology.svg is filled with this --text; change both together */
   --text: #1c1b19;
   --muted: #5f5b54;
   --rule: #e4e0d8;
@@ -11,6 +12,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #141311;
+    /* and public/logo/sovereign-technology-dark.svg with this one */
     --text: #e8e5df;
     --muted: #a39e95;
     --rule: #2c2a26;
@@ -31,15 +33,34 @@ body {
   overflow-wrap: break-word;
 }
 
-main, footer {
+.masthead, main, footer {
   max-width: 38rem;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding-top: 1.5rem;
+}
+
+.brand {
+  flex: none;
+  display: block;
+}
+
+.brand img {
+  display: block;
+  width: auto;
+  height: 1.375rem;
+}
+
 .lang {
-  margin: 1.25rem 0 0;
-  text-align: right;
+  margin: 0;
   color: var(--muted);
   font-size: 0.875rem;
 }
@@ -48,7 +69,7 @@ main, footer {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin: 1.75rem 0 1.75rem;
+  margin: 2.5rem 0 1.75rem;
 }
 
 .intro img {
@@ -124,8 +145,15 @@ footer {
 footer p { margin-bottom: 0.75rem; }
 
 @media (max-width: 30rem) {
-  .intro { margin-top: 1.25rem; }
+  .masthead { padding-top: 1.25rem; }
+  .brand img { height: 1.25rem; }
+  .intro { margin-top: 2rem; }
   .intro img { width: 72px; height: 72px; }
+}
+
+/* keeps the wordmark and the language switch on one row on the narrowest phones */
+@media (max-width: 22.5rem) {
+  .brand img { height: 1.125rem; }
 }
 
 .notfound { margin-top: 3.5rem; }

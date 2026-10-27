@@ -1,5 +1,5 @@
 /* TEAM */
-Cameron, founder
+Cam, founder
 Company: Sovereign Technology S.A.S. de C.V. (El Salvador)
 Contact: services@sovtech.pro
 GitHub: https://github.com/SovereignTechnology

@@ -1,6 +1,6 @@
 # www.sovtech.pro
 
-Cameron's personal page: who I am, what I'm working on, and how to reach me.
+Cam's personal page: who I am, what I'm working on, and how to reach me.
 
 It is one page in two languages, `public/index.html` (English, `/`) and
 `public/es/index.html` (Spanish, `/es/`, Salvadoran voseo), plus one stylesheet, served
@@ -18,6 +18,16 @@ itself: **change them in both places**.
 Everything in `public/` is published as it sits on disk, including files git ignores.
 `public/.assetsignore` keeps the usual secret and editor files out; don't park anything
 else there.
+
+## Logo
+
+The top bar on every page shows the Sovereign Technology wordmark, from the logo set's
+`horizontal/svg/sovereign-technology_name-only_horizontal_black.svg`. The two copies in
+`public/logo/` have their coordinates rounded to whole units and a fill that matches the
+page text: `sovereign-technology.svg` uses the light theme's `--text`, and
+`sovereign-technology-dark.svg` (for the dark theme) uses the dark one. If `--text` changes
+in `style.css`, change the fill in that file too. A `<picture>` picks the file by the
+visitor's colour scheme, the same way the stylesheet does.
 
 ## Preview
 
