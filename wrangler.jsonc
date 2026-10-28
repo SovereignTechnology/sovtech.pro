@@ -25,5 +25,24 @@
     "run_worker_first": ["/"],
     // The nearest 404.html wins, so /es/* gets public/es/404.html.
     "not_found_handling": "404-page"
+  },
+  "env": {
+    // staging.sovtech.pro: its own Worker, for looking at a branch before it reaches main. Every
+    // path runs src/index.js there, which adds the security headers and X-Robots-Tag: noindex.
+    // Deploy: CLOUDFLARE_ACCOUNT_ID=<Sovereign IT> npm run deploy:staging (committed tree, any
+    // branch; no IndexNow ping).
+    "staging": {
+      "name": "sovtech-www-staging",
+      "workers_dev": false,
+      "preview_urls": false,
+      "routes": [{ "pattern": "staging.sovtech.pro", "custom_domain": true }],
+      "vars": { "NOINDEX": "1" },
+      "assets": {
+        "directory": "./public",
+        "binding": "ASSETS",
+        "run_worker_first": true,
+        "not_found_handling": "404-page"
+      }
+    }
   }
 }

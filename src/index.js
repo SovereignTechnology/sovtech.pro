@@ -8,6 +8,9 @@
 //
 // Cloudflare does not apply public/_headers to responses a Worker returns, so the same security
 // headers are set here. Keep SECURITY_HEADERS in step with the /* block in public/_headers.
+//
+// staging.sovtech.pro (wrangler.jsonc env.staging, NOINDEX = "1") sends EVERY path through here, so
+// each response gets the security headers plus X-Robots-Tag: noindex, keeping the copy out of search.
 
 const SECURITY_HEADERS = {
   "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
@@ -24,26 +27,34 @@ const ONE_YEAR = 60 * 60 * 24 * 365;
 
 export default {
   async fetch(request, env) {
-    const url = new URL(request.url);
-    if (url.pathname !== "/" || (request.method !== "GET" && request.method !== "HEAD")) {
-      return env.ASSETS.fetch(request);
-    }
-
-    const chosen = url.searchParams.get("lang");
-    if (chosen === "en" || chosen === "es") {
-      return redirect(
-        HOME[chosen],
-        `lang=${chosen}; Path=/; Max-Age=${ONE_YEAR}; Secure; HttpOnly; SameSite=Lax`,
-      );
-    }
-
-    const lang = cookieLang(request.headers.get("Cookie")) ?? preferredLang(request.headers.get("Accept-Language"));
-    if (lang === "es") return redirect(HOME.es);
-
-    const page = await env.ASSETS.fetch(request);
-    return withHeaders(new Response(page.body, page));
+    const response = await route(request, env);
+    if (env.NOINDEX !== "1") return response;
+    const staged = withHeaders(new Response(response.body, response));
+    staged.headers.set("X-Robots-Tag", "noindex");
+    return staged;
   },
 };
+
+async function route(request, env) {
+  const url = new URL(request.url);
+  if (url.pathname !== "/" || (request.method !== "GET" && request.method !== "HEAD")) {
+    return env.ASSETS.fetch(request);
+  }
+
+  const chosen = url.searchParams.get("lang");
+  if (chosen === "en" || chosen === "es") {
+    return redirect(
+      HOME[chosen],
+      `lang=${chosen}; Path=/; Max-Age=${ONE_YEAR}; Secure; HttpOnly; SameSite=Lax`,
+    );
+  }
+
+  const lang = cookieLang(request.headers.get("Cookie")) ?? preferredLang(request.headers.get("Accept-Language"));
+  if (lang === "es") return redirect(HOME.es);
+
+  const page = await env.ASSETS.fetch(request);
+  return withHeaders(new Response(page.body, page));
+}
 
 function cookieLang(header) {
   for (const part of (header ?? "").split(";")) {

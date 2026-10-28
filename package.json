@@ -5,6 +5,8 @@
     "dev": "wrangler dev --ip 0.0.0.0 --port 3000",
     "predeploy": "[ \"$(git branch --show-current)\" = main ] && [ -z \"$(git status --porcelain)\" ] || { echo 'deploy only from a clean main checkout' >&2; exit 1; }",
     "deploy": "wrangler deploy",
+    "predeploy:staging": "[ -z \"$(git status --porcelain)\" ] || { echo 'commit first: staging shows a commit, not a working tree' >&2; exit 1; }",
+    "deploy:staging": "wrangler deploy --env staging",
     "postdeploy": "curl -sS -o /dev/null -w 'IndexNow: HTTP %{http_code} (200/202 = accepted)\\n' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' --data-binary @indexnow.json"
   },
   "devDependencies": {

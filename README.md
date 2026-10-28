@@ -32,10 +32,12 @@ visitor's colour scheme, the same way the stylesheet does.
 ## Search and sharing
 
 - **Structured data.** Each page ends its `<head>` with one `application/ld+json` block
-  describing the site, the page, me and the company, with the four "Work with me" services.
+  describing the site, the page, me and the company. The company's `makesOffer` lists the
+  nine groups in "Work with me" → "Everything I do", in the same order and under the same
+  names as the bold labels there: change the list and `makesOffer` together, on both pages.
   It is data, not script: the CSP does not apply to it, and the pages still run no
   JavaScript. Keep the two pages' blocks in step, and only state what the page itself says
-  (Google's rule). `@id`s are absolute (`https://www.sovtech.pro/#org` and so on) so both
+  (Google's rule; it also indexes the text inside the collapsed `<details>`). `@id`s are absolute (`https://www.sovtech.pro/#org` and so on) so both
   pages describe the same entities.
 - **Titles and descriptions.** Titles stay within 60 characters and descriptions within
   155, so search results show them whole. `og:description` repeats the description.
@@ -64,6 +66,20 @@ npm run dev        # wrangler dev on 0.0.0.0:3000, runs src/index.js, applies _h
 
 Check the language pick with
 `curl -sI -H 'Accept-Language: es-SV,es;q=0.9' http://127.0.0.1:3000/` (expect a 302 to `/es/`).
+
+## Staging
+
+`staging.sovtech.pro` is a second Worker, `sovtech-www-staging` (`env.staging` in
+`wrangler.jsonc`), for looking at a branch before it goes to main. It serves the same
+`public/`, but every path runs through `src/index.js`, which adds the security headers and
+`X-Robots-Tag: noindex` so search engines leave the copy alone.
+
+```sh
+CLOUDFLARE_ACCOUNT_ID=<Sovereign IT> npm run deploy:staging   # any branch, committed tree only
+```
+
+It does not ping IndexNow. Staging keeps whatever was deployed last, so after a release it
+may show an older or newer branch than www.
 
 ## Deploy
 
