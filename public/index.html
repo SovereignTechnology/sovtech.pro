@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>Cam · Sovereign Technology — Nostr &amp; Bitcoin, El Salvador</title>
-  <meta name="description" content="I'm Cam. I build open-source Nostr and Bitcoin software in El Salvador, run my own servers, and set up Linux, private AI and Bitcoin payments for clients.">
+  <meta name="description" content="I'm Cam. I build open-source Nostr and Bitcoin software in El Salvador and set up OpenClaw agents, private AI, servers and Bitcoin payments for clients.">
   <meta name="author" content="Cam">
   <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
@@ -23,7 +23,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_SV">
   <meta property="og:title" content="Cam · Sovereign Technology">
-  <meta property="og:description" content="I'm Cam. I build open-source Nostr and Bitcoin software in El Salvador, run my own servers, and set up Linux, private AI and Bitcoin payments for clients.">
+  <meta property="og:description" content="I'm Cam. I build open-source Nostr and Bitcoin software in El Salvador and set up OpenClaw agents, private AI, servers and Bitcoin payments for clients.">
   <meta property="og:image" content="https://www.sovtech.pro/share.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
@@ -57,7 +57,7 @@
         "@id": "https://www.sovtech.pro/#page",
         "url": "https://www.sovtech.pro/",
         "name": "Cam · Sovereign Technology — Nostr & Bitcoin, El Salvador",
-        "description": "I'm Cam. I build open-source Nostr and Bitcoin software in El Salvador, run my own servers, and set up Linux, private AI and Bitcoin payments for clients.",
+        "description": "I'm Cam. I build open-source Nostr and Bitcoin software in El Salvador and set up OpenClaw agents, private AI, servers and Bitcoin payments for clients.",
         "inLanguage": "en",
         "isPartOf": {
           "@id": "https://www.sovtech.pro/#website"
@@ -71,7 +71,7 @@
           "width": 1200,
           "height": 630
         },
-        "dateModified": "2026-10-27"
+        "dateModified": "2026-10-28"
       },
       {
         "@type": "Person",
@@ -95,7 +95,9 @@
           "Git over Nostr",
           "Self-hosting",
           "Linux servers",
-          "Private AI"
+          "Private AI",
+          "OpenClaw",
+          "AI agents"
         ],
         "sameAs": [
           "https://github.com/SovereignTechnology",
@@ -132,33 +134,84 @@
           "https://git.sovtech.pro/",
           "https://ditto.pub/npub1s0vtechh66tx7vrwdud8zfyheu9zca7swwfrzd4qu2a4f93mxs6qvn9adx"
         ],
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "El Salvador"
+          },
+          "Worldwide"
+        ],
         "makesOffer": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Linux servers and self-hosted infrastructure"
+              "name": "OpenClaw AI agents",
+              "description": "Setting up OpenClaw agents that do real work for your team, connected to the chat apps and tools you already use, with private data kept on private models, and keeping them running afterward."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Private AI that runs on your own hardware"
+              "name": "Private AI",
+              "description": "A local AI box for offices whose data can't leave the building, or open models hosted for you."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Bitcoin and Lightning payments"
+              "name": "Servers and self-hosting",
+              "description": "Linux servers and VPSes where you keep root; mail, file sync, passwords and VPNs; moving off Google and iCloud to Nextcloud and Immich; tested backups."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Websites"
+              "name": "Bitcoin and Lightning",
+              "description": "Nodes, Lightning, BTCPay Server payments and point of sale, cold storage, multisig inheritance plans, and Lightning channel recovery."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Security",
+              "description": "Web app and API security testing, security reviews and hardening, and GrapheneOS phones."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Networks and smart homes",
+              "description": "Wi-Fi and cabling, firewalls and DNS filtering, Home Assistant, and private cameras that record locally."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business systems",
+              "description": "ERPNext with El Salvador electronic invoicing (DTE), GLPI for tracking equipment, and Nextcloud for teams."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Websites and software",
+              "description": "Open-source sites and apps where you own the code, the content and the hosting; custom software in Python, JavaScript, Go and Rust; privacy-respecting analytics and ads."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IT support",
+              "description": "Managed Linux workstations, remote and on-site help, device setup and imaging, hardware advice, a family CTO plan for households, and workshops."
             }
           }
         ]
@@ -263,7 +316,8 @@
   <a href="https://openclaw.ai" rel="noopener noreferrer">OpenClaw</a>, the open-source agent. It does
   real work for me, not just chat. For anything private it uses
   <a href="https://maple.ai" rel="noopener noreferrer">Maple</a>, private AI that runs its models
-  inside secure hardware enclaves (TEEs), so not even Maple can read what I send it.</p>
+  inside secure hardware enclaves (TEEs), so not even Maple can read what I send it. I
+  <a href="#work-with-me">set up agents like this for clients</a> too.</p>
 
   <h2 id="how-i-got-here">How I got here</h2>
   <p>I started on PCs young, mostly gaming. In elementary school my brother and I made videos and
@@ -277,8 +331,39 @@
   Technology from El Salvador.</p>
 
   <h2 id="work-with-me">Work with me</h2>
-  <p>I also do client work: Linux servers and self-hosted infrastructure, private AI that runs on
-  your own hardware, Bitcoin and Lightning payments, and websites. Two I've built:
+  <p>I also do client work: OpenClaw AI agents, Linux servers and self-hosted infrastructure,
+  private AI on your own hardware, Bitcoin and Lightning payments, and websites. In person in
+  El Salvador, remotely anywhere.</p>
+  <details class="services">
+    <summary>Everything I do</summary>
+    <ul class="small">
+      <li><strong>OpenClaw AI agents</strong>: I set up OpenClaw agents that do real work for your
+      team, connected to the chat apps and tools you already use. Private data stays on private
+      models (Maple, or your own hardware), and I keep the agents running afterward.</li>
+      <li><strong>Private AI</strong>: a local AI box for offices whose data can't leave the
+      building, like law firms, clinics and finance, or open models hosted for you.</li>
+      <li><strong>Servers and self-hosting</strong>: Linux servers and VPSes where you keep root;
+      mail, file sync, passwords and VPNs; moving off Google and iCloud to Nextcloud and Immich;
+      backups that are actually tested.</li>
+      <li><strong>Bitcoin and Lightning</strong>: nodes, Lightning, BTCPay Server payments and point
+      of sale for shops, cold storage, multisig inheritance plans, and Lightning channel
+      recovery.</li>
+      <li><strong>Security</strong>: web app and API security testing, security reviews and
+      hardening, and GrapheneOS phones.</li>
+      <li><strong>Networks and smart homes</strong>: Wi-Fi and cabling, firewalls and DNS filtering,
+      Home Assistant, and private cameras that record locally.</li>
+      <li><strong>Business systems</strong>: ERPNext with El Salvador electronic invoicing (DTE;
+      <a href="https://github.com/SovereignTechnology/sv_dte_erpnext" rel="noopener noreferrer">source</a>),
+      GLPI for tracking equipment, and Nextcloud for teams.</li>
+      <li><strong>Websites and software</strong>: open-source sites and apps where you own the code,
+      the content and the hosting, with care plans afterward; custom software in Python,
+      JavaScript, Go and Rust; privacy-respecting analytics and ads.</li>
+      <li><strong>IT support</strong>: managed Linux workstations, remote and on-site help, device
+      setup and imaging, hardware advice, a "family CTO" plan for whole households, and workshops
+      on self-hosting and Bitcoin custody.</li>
+    </ul>
+  </details>
+  <p>Two websites I've built:
   <a href="https://whatarush.org" rel="noopener noreferrer">What A Rush</a> (horse-assisted therapy;
   <a href="https://github.com/SovereignTechnology/whatarush.org" rel="noopener noreferrer">source</a>)
   and <a href="https://renaissance.rodeo" rel="noopener noreferrer">Renaissance Rodeo</a>

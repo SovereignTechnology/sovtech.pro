@@ -127,7 +127,20 @@ a {
 
 a:hover { color: var(--link-hover); }
 
-a:focus-visible {
+summary {
+  width: fit-content;
+  color: var(--link);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+summary:hover { color: var(--link-hover); }
+
+details { margin-bottom: 1rem; }
+details[open] summary { margin-bottom: 0.75rem; }
+
+a:focus-visible, summary:focus-visible {
   outline: 2px solid var(--link);
   outline-offset: 2px;
   border-radius: 2px;
