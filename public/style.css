@@ -140,6 +140,79 @@ summary:hover { color: var(--link-hover); }
 details { margin-bottom: 1rem; }
 details[open] summary { margin-bottom: 0.75rem; }
 
+/* Folded text. Each entry shows one line and keeps the rest in a <details>, so the page reads as a
+   list of short entries. There is still no script, and find-in-page and search engines read what
+   is folded. */
+.more { margin: -0.7rem 0 0.3rem; }
+.more > summary {
+  padding: 0.4rem 0;
+  font-size: 0.9375rem;
+}
+.more > summary .when-open,
+.more[open] > summary .when-closed { display: none; }
+.more[open] > summary .when-open { display: inline; }
+.more[open] > summary { margin-bottom: 0.35rem; }
+.more > :last-child { margin-bottom: 0.6rem; }
+
+/* Read by screen readers, not shown: says what "Read more" is about. */
+.vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* "Smaller things": a row per item, the rest when the row is opened. The arrow is drawn here and
+   the text is padded past it, so a row that wraps onto two lines on a phone stays aligned. The
+   summary is a plain block (not flex or grid, which older Safari ignores on <summary>). */
+.fold {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+.fold > li { border-bottom: 1px solid var(--rule); }
+.fold details { margin: 0; }
+.fold summary {
+  display: block;
+  position: relative;
+  width: auto;
+  padding: 0.6rem 0 0.6rem 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.fold summary::-webkit-details-marker { display: none; }
+.fold summary::before {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  left: 0.05rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border: solid var(--link);
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.fold details[open] > summary::before {
+  top: 1.05rem;
+  left: 0.15rem;
+  transform: rotate(45deg);
+}
+.fold summary:hover { color: var(--link-hover); }
+.fold details[open] > summary { margin-bottom: 0; }
+.fold details > p { margin: 0 0 0.6rem 1.1rem; }
+.fold details > p:last-child { margin-bottom: 0.9rem; }
+
+/* "Work with me": two folded lists, one under the other. */
+.services, .sites { margin-bottom: 0.25rem; }
+.services > summary, .sites > summary { padding: 0.4rem 0; }
+.sites { margin-bottom: 0.75rem; }
+
 a:focus-visible, summary:focus-visible {
   outline: 2px solid var(--link);
   outline-offset: 2px;
@@ -162,6 +235,8 @@ footer p { margin-bottom: 0.75rem; }
   .brand img { height: 1.25rem; }
   .intro { margin-top: 2rem; }
   .intro img { width: 72px; height: 72px; }
+  h2 { margin-top: 2.25rem; padding-top: 1.25rem; }
+  h3 { margin-top: 1.5rem; }
 }
 
 /* keeps the wordmark and the language switch on one row on the narrowest phones */

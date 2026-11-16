@@ -254,18 +254,21 @@
   <h2 id="projects">What I'm working on</h2>
 
   <h3>Nutflix and NFX <span class="status">pre-release</span></h3>
-  <p>Peer-to-peer video where the people who share a video get paid by the people watching it.
-  Videos are announced on Nostr, streamed from other viewers' computers, and paid for piece by piece
-  in Cashu ecash. The creator sets the price, and you see it before you press play.</p>
-  <p>There are two versions. Nutflix is the desktop app. Version 0.1.2 for Linux came out in
-  November, and it's a demo for now, not something to trust with real money. NFX is the open spec
-  plus a Rust version built on iroh. It had its first releases in November too, with free video
-  only for now: payments aren't wired in yet. The desktop app plays NFX videos as well.</p>
-  <p>There's a web client now too, at
-  <a href="https://web.nutflix.xyz" rel="noopener noreferrer">web.nutflix.xyz</a>: NFX videos play in
-  a plain browser with nothing to install. The browser can fetch the pieces straight from other
-  viewers and seeders over WebRTC, and it checks every one before it plays. It's a small test
-  network for now, with a test video on it.</p>
+  <p>Peer-to-peer video where the people who share a video get paid by the people watching it.</p>
+  <details class="more">
+    <summary><span class="when-closed">Read more</span><span class="when-open">Read less</span><span class="vh"> about Nutflix and NFX</span></summary>
+    <p>Videos are announced on Nostr, streamed from other viewers' computers, and paid for piece by
+    piece in Cashu ecash. The creator sets the price, and you see it before you press play.</p>
+    <p>There are two versions. Nutflix is the desktop app. Version 0.1.2 for Linux came out in
+    November, and it's a demo for now, not something to trust with real money. NFX is the open spec
+    plus a Rust version built on iroh. It had its first releases in November too, with free video
+    only for now: payments aren't wired in yet. The desktop app plays NFX videos as well.</p>
+    <p>There's a web client now too, at
+    <a href="https://web.nutflix.xyz" rel="noopener noreferrer">web.nutflix.xyz</a>: NFX videos play in
+    a plain browser with nothing to install. The browser can fetch the pieces straight from other
+    viewers and seeders over WebRTC, and it checks every one before it plays. It's a small test
+    network for now, with a test video on it.</p>
+  </details>
   <p class="links">
     <a href="https://nutflix.xyz" rel="noopener noreferrer">nutflix.xyz</a> ·
     <a href="https://github.com/SovereignTechnology/nutflix-pear" rel="noopener noreferrer">Nutflix desktop</a> ·
@@ -274,47 +277,59 @@
   </p>
 
   <h3>bipnip <span class="status">in development</span></h3>
-  <p>A network on Nostr for people who run Lightning nodes. It's a fork of
-  <a href="https://mostro.network" rel="noopener noreferrer">Mostro</a>, the peer-to-peer Bitcoin
-  exchange that runs over Nostr and Lightning, and it keeps everything Mostro does. What it adds is
-  for node runners. With a channel lease, you pay another node to open a channel to you, of a size
-  and for a time you both agree on. Your node holds the key to the payment until it has checked the
-  channel itself, so nobody can take the money without opening it. A ring is a few node runners who
-  each open a channel to the next. And a Nostr key and a Lightning node can vouch for each other
-  with signatures anyone can check.</p>
-  <p>It's early. So far a lease completes between two real LND nodes on a test network, and the
-  buyer gets the payment back if the channel never opens. Rings aren't built yet, and none of it is
-  ready for real money.</p>
+  <p>A network on Nostr for people who run Lightning nodes, where they can lease channels to each
+  other.</p>
+  <details class="more">
+    <summary><span class="when-closed">Read more</span><span class="when-open">Read less</span><span class="vh"> about bipnip</span></summary>
+    <p>It's a fork of <a href="https://mostro.network" rel="noopener noreferrer">Mostro</a>, the
+    peer-to-peer Bitcoin exchange that runs over Nostr and Lightning, and it keeps everything Mostro
+    does. What it adds is for node runners. With a channel lease, you pay another node to open a
+    channel to you, of a size and for a time you both agree on. Your node holds the key to the
+    payment until it has checked the channel itself, so nobody can take the money without opening
+    it. A ring is a few node runners who each open a channel to the next. And a Nostr key and a
+    Lightning node can vouch for each other with signatures anyone can check.</p>
+    <p>It's early. So far a lease completes between two real LND nodes on a test network, and the
+    buyer gets the payment back if the channel never opens. Rings aren't built yet, and none of it is
+    ready for real money.</p>
+  </details>
   <p class="links">
     <a href="https://github.com/SovereignTechnology/bipnip" rel="noopener noreferrer">bipnip</a>
   </p>
 
   <h3>vortex-ng <span class="status">in development</span></h3>
-  <p>A coinjoin is one Bitcoin transaction that several people build together, so someone looking
-  at the chain can't tell whose coins went where.
-  <a href="https://github.com/JoinMarket-Org/joinmarket-clientserver" rel="noopener noreferrer">JoinMarket</a>
-  has done this for years as an open market, with no coordinator in the middle. <span class="nowrap">vortex-ng</span> follows
-  JoinMarket's protocol, carries the messages over Nostr relays, and is written in Rust. It picks up
-  an idea from <a href="https://github.com/ln-vortex/ln-vortex" rel="noopener noreferrer">LnVortex</a>,
-  which is archived now: an output of the coinjoin can fund a new Lightning channel, so the channel
-  opens straight out of the coinjoin.</p>
-  <p>It's early. On a test network, whole coinjoins already go through and confirm on Bitcoin Core.
-  Opening channels from them isn't built yet, and nothing here should go near mainnet.</p>
+  <p>JoinMarket's coinjoin protocol carried over Nostr relays, in Rust, with Lightning channel opens
+  to come.</p>
+  <details class="more">
+    <summary><span class="when-closed">Read more</span><span class="when-open">Read less</span><span class="vh"> about vortex-ng</span></summary>
+    <p>A coinjoin is one Bitcoin transaction that several people build together, so someone looking
+    at the chain can't tell whose coins went where.
+    <a href="https://github.com/JoinMarket-Org/joinmarket-clientserver" rel="noopener noreferrer">JoinMarket</a>
+    has done this for years as an open market, with no coordinator in the middle. <span class="nowrap">vortex-ng</span> follows
+    JoinMarket's protocol, carries the messages over Nostr relays, and is written in Rust. It picks up
+    an idea from <a href="https://github.com/ln-vortex/ln-vortex" rel="noopener noreferrer">LnVortex</a>,
+    which is archived now: an output of the coinjoin can fund a new Lightning channel, so the channel
+    opens straight out of the coinjoin.</p>
+    <p>It's early. On a test network, whole coinjoins already go through and confirm on Bitcoin Core.
+    Opening channels from them isn't built yet, and nothing here should go near mainnet.</p>
+  </details>
   <p class="links">
     <a href="https://github.com/SovereignTechnology/vortex-ng" rel="noopener noreferrer">vortex-ng</a>
   </p>
 
   <h3>Private git over Nostr <span class="status">experimental</span></h3>
-  <p>Git on Nostr already lets you host code without GitHub, but everything on it is public. I'm
-  working on private repositories that can sit on a server you don't trust. <span class="nowrap">cord-git</span> encrypts
-  everything before it's uploaded and handles the keys, members and invites, so the server only
-  ever stores ciphertext. The server half is <span class="nowrap">grasp-p</span>, my fork of the
-  ngit-grasp git server.</p>
-  <p>I publish my own open-source projects on Nostr too, with
-  <a href="https://ngit.dev" rel="noopener noreferrer">ngit</a>, and mirror each one to GitHub. I also
-  run <a href="https://git.sovtech.pro" rel="noopener noreferrer">git.sovtech.pro</a>, my build of
-  <a href="https://gitworkshop.dev" rel="noopener noreferrer">GitWorkshop</a>, the web client for git
-  over Nostr. I keep it close to upstream on purpose.</p>
+  <p>Private repositories for git on Nostr that can sit on a server you don't trust.</p>
+  <details class="more">
+    <summary><span class="when-closed">Read more</span><span class="when-open">Read less</span><span class="vh"> about private git over Nostr</span></summary>
+    <p>Git on Nostr already lets you host code without GitHub, but everything on it is public.
+    <span class="nowrap">cord-git</span> encrypts everything before it's uploaded and handles the keys,
+    members and invites, so the server only ever stores ciphertext. The server half is
+    <span class="nowrap">grasp-p</span>, my fork of the ngit-grasp git server.</p>
+    <p>I publish my own open-source projects on Nostr too, with
+    <a href="https://ngit.dev" rel="noopener noreferrer">ngit</a>, and mirror each one to GitHub. I also
+    run <a href="https://git.sovtech.pro" rel="noopener noreferrer">git.sovtech.pro</a>, my build of
+    <a href="https://gitworkshop.dev" rel="noopener noreferrer">GitWorkshop</a>, the web client for git
+    over Nostr. I keep it close to upstream on purpose.</p>
+  </details>
   <p class="links">
     <a href="https://github.com/SovereignTechnology/cord-git" rel="noopener noreferrer">cord-git</a> ·
     <a href="https://github.com/SovereignTechnology/grasp-p" rel="noopener noreferrer">grasp-p</a> ·
@@ -322,10 +337,13 @@
   </p>
 
   <h3>BIES, Build in El Salvador <span class="status">live</span></h3>
-  <p>A Nostr app for the Build in El Salvador community: a feed, encrypted messages, a member
-  directory, events, project pages and Lightning payments, in English and Spanish. Your account is
-  your own Nostr key, so it goes with you if you ever leave. nostrbook is the same idea made general,
-  for any community.</p>
+  <p>A Nostr app for the Build in El Salvador community, in English and Spanish.</p>
+  <details class="more">
+    <summary><span class="when-closed">Read more</span><span class="when-open">Read less</span><span class="vh"> about BIES</span></summary>
+    <p>It has a feed, encrypted messages, a member directory, events, project pages and Lightning
+    payments. Your account is your own Nostr key, so it goes with you if you ever leave. nostrbook is
+    the same idea made general, for any community.</p>
+  </details>
   <p class="links">
     <a href="https://app.buildinelsalvador.com" rel="noopener noreferrer">app.buildinelsalvador.com</a> ·
     <a href="https://github.com/Build-in-El-Salvador/BIES-app" rel="noopener noreferrer">BIES source</a> ·
@@ -333,50 +351,84 @@
   </p>
 
   <h2 id="smaller-things">Smaller things</h2>
-  <ul class="small">
-    <li><a href="https://keytr.org" rel="noopener noreferrer">keytr</a>: log in to Nostr with a
-    passkey. Your key is encrypted with the passkey and kept on relays, so any device that has the
-    passkey can sign you in.
-    (<a href="https://github.com/SovereignTechnology/keytr" rel="noopener noreferrer">source</a>)</li>
-    <li><a href="https://nbread.lol" rel="noopener noreferrer">nbread</a>: blogging on Nostr. Your
-    posts are signed by your key, and nbread just shows them, quickly, at you.nbread.lol.
-    (<a href="https://github.com/SovereignTechnology/nbread" rel="noopener noreferrer">source</a>)</li>
-    <li>Nostreward: a rewards system built on Nostr. You hand out redeem codes with a product, a
-    promotion or anything else, and when someone redeems one the bot can zap them, repost their note,
-    or let them into a private relay.
-    (<a href="https://github.com/SovereignTechnology/Nostreward" rel="noopener noreferrer">source</a>)</li>
-    <li>Patches sent upstream: when something I build on has a bug or is missing a piece, I send the
-    patch back. Lately that's been
-    <a href="https://github.com/rbitcoin-org/rbitcoin" rel="noopener noreferrer">rbitcoin</a> (a
-    Bitcoin node written in Rust),
-    <a class="nowrap" href="https://github.com/joinmarket-ng/joinmarket-ng" rel="noopener noreferrer">JoinMarket-NG</a>,
-    <a href="https://github.com/lightningdevkit/ldk-server" rel="noopener noreferrer">LDK Server</a> and
-    <a class="nowrap" href="https://github.com/mmalmi/nostr-vpn" rel="noopener noreferrer">nostr-vpn</a>.</li>
+  <ul class="fold">
+    <li>
+      <details>
+        <summary><strong>keytr</strong>: log in to Nostr with a passkey.</summary>
+        <p>Your key is encrypted with the passkey and kept on relays, so any device that has the
+        passkey can sign you in.</p>
+        <p class="links">
+          <a href="https://keytr.org" rel="noopener noreferrer">keytr.org</a> ·
+          <a href="https://github.com/SovereignTechnology/keytr" rel="noopener noreferrer">source</a>
+        </p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><strong>nbread</strong>: blogging on Nostr.</summary>
+        <p>Your posts are signed by your key, and nbread just shows them, quickly, at
+        you.nbread.lol.</p>
+        <p class="links">
+          <a href="https://nbread.lol" rel="noopener noreferrer">nbread.lol</a> ·
+          <a href="https://github.com/SovereignTechnology/nbread" rel="noopener noreferrer">source</a>
+        </p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><strong>Nostreward</strong>: a rewards system built on Nostr.</summary>
+        <p>You hand out redeem codes with a product, a promotion or anything else, and when someone
+        redeems one the bot can zap them, repost their note, or let them into a private relay.</p>
+        <p class="links">
+          <a href="https://github.com/SovereignTechnology/Nostreward" rel="noopener noreferrer">source</a>
+        </p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><strong>Patches sent upstream</strong>: fixes for the projects I build on.</summary>
+        <p>When something I build on has a bug or is missing a piece, I send the patch back. Lately
+        that's been
+        <a href="https://github.com/rbitcoin-org/rbitcoin" rel="noopener noreferrer">rbitcoin</a> (a
+        Bitcoin node written in Rust),
+        <a class="nowrap" href="https://github.com/joinmarket-ng/joinmarket-ng" rel="noopener noreferrer">JoinMarket-NG</a>,
+        <a href="https://github.com/lightningdevkit/ldk-server" rel="noopener noreferrer">LDK Server</a> and
+        <a class="nowrap" href="https://github.com/mmalmi/nostr-vpn" rel="noopener noreferrer">nostr-vpn</a>.</p>
+      </details>
+    </li>
   </ul>
 
   <h2 id="self-hosting">Running my own stuff</h2>
-  <p>I don't like depending on big platforms, so I host almost everything myself: git, email,
-  passwords, notes, the VPN that ties my machines together, and the login for all of it. Each
-  service runs in its own small virtual machine on hardware I own, and no third party decrypts the
-  traffic on the way in. It's a lot of work. It's also the best way I know to learn how this stuff
-  really works, and most of what I do for clients I tried on my own setup first.</p>
-  <p>I also run my own AI assistant, built on
-  <a href="https://openclaw.ai" rel="noopener noreferrer">OpenClaw</a>, the open-source agent. It does
-  real work for me, not just chat. For anything private it uses
-  <a href="https://maple.ai" rel="noopener noreferrer">Maple</a>, private AI that runs its models
-  inside secure hardware enclaves (TEEs), so not even Maple can read what I send it. I
-  <a href="#work-with-me">set up agents like this for clients</a> too.</p>
+  <p>I don't like depending on big platforms, so I host almost everything myself.</p>
+  <details class="more">
+    <summary><span class="when-closed">Read more</span><span class="when-open">Read less</span><span class="vh"> about running my own stuff</span></summary>
+    <p>That means git, email, passwords, notes, the VPN that ties my machines together, and the login
+    for all of it. Each service runs in its own small virtual machine on hardware I own, and no third
+    party decrypts the traffic on the way in. It's a lot of work. It's also the best way I know to
+    learn how this stuff really works, and most of what I do for clients I tried on my own setup
+    first.</p>
+    <p>I also run my own AI assistant, built on
+    <a href="https://openclaw.ai" rel="noopener noreferrer">OpenClaw</a>, the open-source agent. It does
+    real work for me, not just chat. For anything private it uses
+    <a href="https://maple.ai" rel="noopener noreferrer">Maple</a>, private AI that runs its models
+    inside secure hardware enclaves (TEEs), so not even Maple can read what I send it. I
+    <a href="#work-with-me">set up agents like this for clients</a> too.</p>
+  </details>
 
   <h2 id="how-i-got-here">How I got here</h2>
-  <p>I started on PCs young, mostly gaming. In elementary school my brother and I made videos and
-  little animations in Movie Maker. At 11 I was making websites from Zoomshare templates, mostly by
-  copying my favorite Flash games into them, and around then I got into competitive FPS games and
-  built my first computer. At 13 Santa brought me a netbook. I put Kali Linux on it, got an Alfa
-  wireless adapter, and taught myself how Wi-Fi security works. I started writing VB.NET and piecing
-  together open-source C++ around then too.</p>
-  <p>In high school I was the one everybody brought their computer to: family, friends from church,
-  classmates, even a few teachers. Later I worked in IT at Health First. Now I run Sovereign
-  Technology from El Salvador.</p>
+  <p>I started on PCs young, mostly gaming.</p>
+  <details class="more">
+    <summary><span class="when-closed">Read more</span><span class="when-open">Read less</span><span class="vh"> about how I got here</span></summary>
+    <p>In elementary school my brother and I made videos and little animations in Movie Maker. At 11
+    I was making websites from Zoomshare templates, mostly by copying my favorite Flash games into
+    them, and around then I got into competitive FPS games and built my first computer. At 13 Santa
+    brought me a netbook. I put Kali Linux on it, got an Alfa wireless adapter, and taught myself how
+    Wi-Fi security works. I started writing VB.NET and piecing together open-source C++ around then
+    too.</p>
+    <p>In high school I was the one everybody brought their computer to: family, friends from church,
+    classmates, even a few teachers. Later I worked in IT at Health First. Now I run Sovereign
+    Technology from El Salvador.</p>
+  </details>
 
   <h2 id="work-with-me">Work with me</h2>
   <p>I also do client work: OpenClaw AI agents, Linux servers and self-hosted infrastructure,
@@ -411,18 +463,21 @@
       on self-hosting and Bitcoin custody.</li>
     </ul>
   </details>
-  <p>Two websites I've built:
-  <a href="https://whatarush.org" rel="noopener noreferrer">What A Rush</a> (horse-assisted therapy;
-  <a href="https://github.com/SovereignTechnology/whatarush.org" rel="noopener noreferrer">source</a>)
-  and <a href="https://renaissance.rodeo" rel="noopener noreferrer">Renaissance Rodeo</a>
-  (<a href="https://github.com/SovereignTechnology/renaissance-rodeo" rel="noopener noreferrer">source</a>),
-  where I also set up the ticketing system, taking Bitcoin through BTCPay Server, with my own fixes
-  to the payment plugin
-  (<a href="https://github.com/SovereignTechnology/pretix-bitpay" rel="noopener noreferrer">source</a>).
-  I also look after the site for the
-  <a href="https://bitcoinfarmersmarket.org" rel="noopener noreferrer">Bitcoin Farmers Market</a>,
-  a market on the Surf City coast where Bitcoin is preferred
-  (<a href="https://github.com/SovereignTechnology/bitcoinfarmersmarket.org" rel="noopener noreferrer">source</a>).</p>
+  <details class="sites">
+    <summary>Sites I've built</summary>
+    <p>Two websites I've built:
+    <a href="https://whatarush.org" rel="noopener noreferrer">What A Rush</a> (horse-assisted therapy;
+    <a href="https://github.com/SovereignTechnology/whatarush.org" rel="noopener noreferrer">source</a>)
+    and <a href="https://renaissance.rodeo" rel="noopener noreferrer">Renaissance Rodeo</a>
+    (<a href="https://github.com/SovereignTechnology/renaissance-rodeo" rel="noopener noreferrer">source</a>),
+    where I also set up the ticketing system, taking Bitcoin through BTCPay Server, with my own fixes
+    to the payment plugin
+    (<a href="https://github.com/SovereignTechnology/pretix-bitpay" rel="noopener noreferrer">source</a>).
+    I also look after the site for the
+    <a href="https://bitcoinfarmersmarket.org" rel="noopener noreferrer">Bitcoin Farmers Market</a>,
+    a market on the Surf City coast where Bitcoin is preferred
+    (<a href="https://github.com/SovereignTechnology/bitcoinfarmersmarket.org" rel="noopener noreferrer">source</a>).</p>
+  </details>
   <p>If you have something in mind, email me at
   <a href="mailto:services@sovtech.pro">services@sovtech.pro</a>.</p>
 

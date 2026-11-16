@@ -19,6 +19,23 @@ Everything in `public/` is published as it sits on disk, including files git ign
 `public/.assetsignore` keeps the usual secret and editor files out; don't park anything
 else there.
 
+## Folded text
+
+The page is kept short: each entry shows one line and folds the rest away in a `<details>`,
+still with no JavaScript.
+
+- **Projects and the two prose sections** ("Running my own stuff", "How I got here"): a
+  one-line `<p>`, then `<details class="more">` with the full text. Its `<summary>` holds
+  both labels, "Read more" in `.when-closed` and "Read less" in `.when-open`, and the
+  stylesheet shows the one that fits. The `.vh` span after them says what the entry is, for
+  screen readers only. A project's link row stays outside the fold.
+- **"Smaller things"** is `<ul class="fold">`: each row's `<summary>` is the one-line
+  version, and the explanation and links are inside.
+- **"Work with me"** folds the service list and the sites I've built under their own labels.
+
+When you add an entry, write its one-line version first. Search engines and the browser's
+find-in-page read folded text, so it still counts as page content.
+
 ## Logo
 
 The top bar on every page shows the Sovereign Technology wordmark, from the logo set's
