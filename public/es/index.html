@@ -71,7 +71,7 @@
           "width": 1200,
           "height": 630
         },
-        "dateModified": "2026-10-29"
+        "dateModified": "2026-11-16"
       },
       {
         "@type": "Person",
@@ -257,15 +257,54 @@
   <p>Video peer-to-peer donde quienes comparten un video cobran a quienes lo están viendo. Los videos
   se anuncian en Nostr, se transmiten desde las computadoras de otros espectadores y se pagan pedacito
   a pedacito con ecash de Cashu. El creador pone el precio, y vos lo ves antes de darle play.</p>
-  <p>Hay dos versiones. Nutflix es la app de escritorio. La versión 0.1.0 para Linux salió el
-  5 de octubre, y por ahora es una demo, no algo para confiarle dinero de verdad. NFX es la
-  especificación abierta más una versión en Rust hecha sobre iroh. Publicar, compartir y reproducir
-  ya funcionan en pruebas. Los pagos todavía no están conectados.</p>
+  <p>Hay dos versiones. Nutflix es la app de escritorio. La versión 0.1.2 para Linux salió en
+  noviembre, y por ahora es una demo, no algo para confiarle dinero de verdad. NFX es la
+  especificación abierta más una versión en Rust hecha sobre iroh. También se estrenó en noviembre,
+  por ahora solo con video gratis: los pagos todavía no están conectados. La app de escritorio
+  también reproduce los videos de NFX.</p>
+  <p>Ahora también hay un cliente web, en
+  <a href="https://web.nutflix.xyz" rel="noopener noreferrer">web.nutflix.xyz</a>: los videos de NFX
+  se ven en un navegador común, sin instalar nada. El navegador puede traer los pedacitos
+  directamente de otros espectadores y de quienes comparten el video, por WebRTC, y revisa cada uno
+  antes de reproducirlo. Por ahora es una red de pruebas pequeña, con un video de prueba.</p>
   <p class="links">
     <a href="https://nutflix.xyz" rel="noopener noreferrer">nutflix.xyz</a> ·
     <a href="https://github.com/SovereignTechnology/nutflix-pear" rel="noopener noreferrer">Nutflix de escritorio</a> ·
     <a href="https://github.com/SovereignTechnology/nfx" rel="noopener noreferrer">NFX</a> ·
     <a href="https://gitworkshop.dev/npub1s0vtechh66tx7vrwdud8zfyheu9zca7swwfrzd4qu2a4f93mxs6qvn9adx/nfx" rel="noopener noreferrer">NFX en Nostr</a>
+  </p>
+
+  <h3>bipnip <span class="status">en desarrollo</span></h3>
+  <p>Una red sobre Nostr para quienes corren nodos Lightning. Es un fork de
+  <a href="https://mostro.network" rel="noopener noreferrer">Mostro</a>, el exchange peer-to-peer de
+  Bitcoin que funciona sobre Nostr y Lightning, y conserva todo lo que Mostro hace. Lo que agrega es
+  para quienes operan nodos. Con un arrendamiento de canal, le pagás a otro nodo para que te abra un
+  canal, del tamaño y por el tiempo que acuerden. Tu nodo se queda con la llave del pago hasta que
+  él mismo ha revisado el canal, así que nadie puede cobrar sin abrirlo. Un anillo es un grupo
+  pequeño de operadores de nodos en el que cada uno le abre un canal al siguiente. Y una llave de
+  Nostr y un nodo Lightning pueden respaldarse entre sí con firmas que cualquiera puede
+  verificar.</p>
+  <p>Apenas está empezando. Hasta ahora, un arrendamiento ya se completa entre dos nodos LND reales
+  en una red de pruebas, y al comprador se le devuelve el pago si el canal nunca se abre. Los
+  anillos todavía no están hechos, y nada de esto está listo para dinero de verdad.</p>
+  <p class="links">
+    <a href="https://github.com/SovereignTechnology/bipnip" rel="noopener noreferrer">bipnip</a>
+  </p>
+
+  <h3>vortex-ng <span class="status">en desarrollo</span></h3>
+  <p>Un coinjoin es una sola transacción de Bitcoin que varias personas arman juntas, así que
+  alguien que mira la cadena no puede saber qué monedas terminaron con quién.
+  <a href="https://github.com/JoinMarket-Org/joinmarket-clientserver" rel="noopener noreferrer">JoinMarket</a>
+  lleva años haciéndolo como un mercado abierto, sin un coordinador en el medio. <span class="nowrap">vortex-ng</span> sigue el
+  protocolo de JoinMarket, manda los mensajes por relays de Nostr y está escrito en Rust. Retoma
+  una idea de <a href="https://github.com/ln-vortex/ln-vortex" rel="noopener noreferrer">LnVortex</a>,
+  que ya está archivado: una salida del coinjoin puede fondear un canal Lightning nuevo, así que el
+  canal se abre directamente desde el coinjoin.</p>
+  <p>Apenas está empezando. En una red de pruebas ya se completan coinjoins enteros y Bitcoin Core
+  los confirma. Abrir canales desde ellos todavía no está hecho, y nada de esto debe acercarse a la
+  red principal de Bitcoin.</p>
+  <p class="links">
+    <a href="https://github.com/SovereignTechnology/vortex-ng" rel="noopener noreferrer">vortex-ng</a>
   </p>
 
   <h3>Git privado sobre Nostr <span class="status">experimental</span></h3>
@@ -310,6 +349,13 @@
     producto, una promoción o lo que sea, y cuando alguien canjea uno, el bot puede mandarle un zap,
     republicar su nota o darle acceso a un relay privado.
     (<a href="https://github.com/SovereignTechnology/Nostreward" rel="noopener noreferrer">código</a>)</li>
+    <li>Parches para otros proyectos: cuando a algo sobre lo que construyo le falta una pieza o
+    tiene un error, mando el parche de vuelta. Últimamente han sido
+    <a href="https://github.com/rbitcoin-org/rbitcoin" rel="noopener noreferrer">rbitcoin</a> (un
+    nodo de Bitcoin escrito en Rust),
+    <a class="nowrap" href="https://github.com/joinmarket-ng/joinmarket-ng" rel="noopener noreferrer">JoinMarket-NG</a>,
+    <a href="https://github.com/lightningdevkit/ldk-server" rel="noopener noreferrer">LDK Server</a> y
+    <a class="nowrap" href="https://github.com/mmalmi/nostr-vpn" rel="noopener noreferrer">nostr-vpn</a>.</li>
   </ul>
 
   <h2 id="servidores-propios">Todo en mis propios servidores</h2>
@@ -399,7 +445,7 @@
     <a href="mailto:services@sovtech.pro">Correo</a>
   </p>
   <p>Sovereign Technology S.A.S. de C.V., El Salvador. Antes sovIT.xyz.<br>
-  Actualizado en octubre de 2026.</p>
+  Actualizado en noviembre de 2026.</p>
 </footer>
 </body>
 </html>
