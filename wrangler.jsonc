@@ -1,12 +1,8 @@
-// sovtech-www -- www.sovtech.pro: Cameron's personal page, plain HTML + CSS served as static
+// sovtech-www -- www.sovtech.pro: Cam's personal page, plain HTML + CSS served as static
 // assets, in English (/) and Spanish (/es/). No build step: public/ is the site, byte for byte.
 // The only Worker code, src/index.js, runs for "/" alone and picks the language there.
 //
-//   * The apex sovtech.pro is NOT here and must not be: its A record stays on the VPS (the PTR is
-//     sovtech.pro and postfix HELOs as it), and its TLS ends on l5400 apex-edge, which serves the
-//     NIP-05 file and 301s everything else to www.
-//   * The planning-agent Worker `sovtech` (feat/planning-agent-*) is a DIFFERENT Worker and is left
-//     untouched; its isolated staging `sovtech-test` runs at pre.sovtech.pro.
+// The apex sovtech.pro is served elsewhere and redirects here; it must not be attached to this Worker.
 // Preview: npm ci && npm run dev    Deploy (clean main only): CLOUDFLARE_ACCOUNT_ID=<Sovereign IT> npm run deploy
 // Security headers and the CSP live in public/_headers, and again in src/index.js for "/" (Cloudflare
 // does not apply _headers to Worker responses); old paths are redirected in public/_redirects.

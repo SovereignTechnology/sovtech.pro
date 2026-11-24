@@ -107,5 +107,16 @@ CLOUDFLARE_ACCOUNT_ID=<Sovereign IT> npm run deploy   # refuses anything but a c
 
 Roll back with `npx wrangler rollback <version id>`.
 
-The apex `sovtech.pro` is served elsewhere and redirects here; see the comment at the
-top of `wrangler.jsonc`.
+The apex `sovtech.pro` is served elsewhere and redirects here; it must not be attached to
+this Worker.
+
+## License
+
+The code and configuration are MIT-licensed (see `LICENSE`): `src/index.js`,
+`public/style.css`, `public/_headers`, `public/_redirects`, `wrangler.jsonc` and
+`package.json`.
+
+Everything else is © 2026 Sovereign Technology S.A.S. de C.V., all rights reserved. That
+includes the text of both pages (`public/index.html`, `public/es/index.html`), the photos
+(`public/cam.jpg`, `public/og.jpg`, `public/share.jpg`) and the logo (`public/logo/`). You
+are welcome to read and fork the repo on GitHub, but please don't reuse those.
